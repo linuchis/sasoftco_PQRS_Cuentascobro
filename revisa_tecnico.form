@@ -1,0 +1,508 @@
+{
+  "components": [
+    {
+      "text": "# Revisión jefe técnico: Cuentas de colaboradores en proyectos SASOFTCO",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1f7xugj",
+        "columns": null
+      },
+      "id": "Field_0q9r0bg"
+    },
+    {
+      "label": "Separator",
+      "type": "separator",
+      "layout": {
+        "row": "Row_0yy0d8z",
+        "columns": null
+      },
+      "id": "Field_1ak8dzz"
+    },
+    {
+      "text": "El presente formulario se realiza con el fin de recopilar los datos de cuentas de cobro de nuestros colaboradores cuyo contrato se encuentra como Operario por Prestación de Servicios (OPS), esto con el propósito de garantizar efectividad en los trámites internos.",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0jx34me",
+        "columns": null
+      },
+      "id": "Field_0yada4c"
+    },
+    {
+      "label": "Nombres",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ovtruq",
+        "columns": null
+      },
+      "id": "Field_011yr90",
+      "key": "nombres",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "text"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Apellidos",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_04pmvxm",
+        "columns": null
+      },
+      "id": "Field_1qzoszt",
+      "key": "apellidos",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "label": "Celular",
+      "type": "number",
+      "layout": {
+        "row": "Row_1h7v03a",
+        "columns": null
+      },
+      "id": "Field_19xonlr",
+      "key": "celular",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "number"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Correo electrónico",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_08e4t0w",
+        "columns": null
+      },
+      "id": "Field_0x81r21",
+      "key": "correo_electronico",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "label": "Dirección de residencia",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0kktxhv",
+        "columns": null
+      },
+      "id": "Field_0jl84ka",
+      "key": "textfield_g81wq6",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "values": [
+        {
+          "label": "Cédula de ciudadanía",
+          "value": "Cédula de ciudadanía"
+        },
+        {
+          "label": "Cédula de extranjería",
+          "value": "Cédula de extranjería"
+        }
+      ],
+      "label": "Tipo de documento",
+      "type": "select",
+      "layout": {
+        "row": "Row_04ttzid",
+        "columns": null
+      },
+      "id": "Field_02vq31s",
+      "key": "tipo_documento",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "label": "Número de documento",
+      "type": "number",
+      "layout": {
+        "row": "Row_04ttzid",
+        "columns": null
+      },
+      "id": "Field_0c2yjik",
+      "key": "numero_documento",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "text"
+      },
+      "readonly": true
+    },
+    {
+      "values": [
+        {
+          "label": "Sí",
+          "value": "Sí"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "¿Cuenta con título universitario?",
+      "type": "select",
+      "layout": {
+        "row": "Row_18a5gsu",
+        "columns": null
+      },
+      "id": "Field_0mhe9wy",
+      "key": "titulo_universitario",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "label": "Número de tarjeta profesional",
+      "type": "number",
+      "layout": {
+        "row": "Row_1mkhg5r",
+        "columns": null
+      },
+      "id": "Field_0jxc0sx",
+      "key": "numero_tarjeta",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "text"
+      },
+      "conditional": {
+        "hide": "=titulo_universitario != \"Sí\""
+      },
+      "readonly": true
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Fecha de inicio de servicio",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1d7e29p",
+        "columns": null
+      },
+      "id": "Field_0kmy9m5",
+      "key": "fecha_inicio",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Fecha de finalización de servicios",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1pkizlg",
+        "columns": null
+      },
+      "id": "Field_1wupjx5",
+      "key": "fecha_fin",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "label": "Valor a cobrar",
+      "type": "number",
+      "layout": {
+        "row": "Row_1p3ypdg",
+        "columns": null
+      },
+      "id": "Field_0rtthtz",
+      "key": "number_vj1ttc",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "label": "Separator",
+      "type": "separator",
+      "layout": {
+        "row": "Row_1gote4y",
+        "columns": null
+      },
+      "id": "Field_1eyjmy4"
+    },
+    {
+      "text": "Anexos de documentación",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_050d465",
+        "columns": null
+      },
+      "id": "Field_1832utz"
+    },
+    {
+      "components": [
+        {
+          "label": "Cuenta de cobro dirigida a SASOFTCO",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_1bewrnp",
+            "columns": null
+          },
+          "id": "Field_0czgpal",
+          "key": "cuenta_cobro",
+          "validate": {
+            "required": true
+          },
+          "properties": {
+            "type": "uploadFile",
+            "limitSize": "5 MB",
+            "allowExtensions": "pdf"
+          },
+          "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+          "readonly": true
+        }
+      ],
+      "showOutline": true,
+      "isRepeating": true,
+      "allowAddRemove": true,
+      "defaultRepetitions": 1,
+      "label": "Puede añadir las cuentas de cobro necesarias en la presente sección. ",
+      "type": "dynamiclist",
+      "layout": {
+        "row": "Row_1tzt9x6",
+        "columns": null
+      },
+      "id": "Field_160zytq",
+      "path": "dynamiclist_78tnoh"
+    },
+    {
+      "label": "Certificado bancario",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1k7nhf6",
+        "columns": null
+      },
+      "id": "Field_0h81jtf",
+      "key": "certificado_banco",
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "uploadFile",
+        "limitSize": "5 MB",
+        "allowExtensions": "pdf"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Copia RUT",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0smfx8g",
+        "columns": null
+      },
+      "id": "Field_1xiyv4a",
+      "key": "RUT",
+      "validate": {
+        "required": true
+      },
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+      "properties": {
+        "type": "uploadFile",
+        "limitSize": "5 MB",
+        "allowExtensions": "pdf"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Seguridad socal asociada",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1omrn2r",
+        "columns": null
+      },
+      "id": "Field_1l9bp7j",
+      "key": "textfield_pkpry",
+      "validate": {
+        "required": true
+      },
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+      "properties": {
+        "type": "uploadFile",
+        "limitSize": "5 MB",
+        "allowExtensions": "pdf"
+      },
+      "readonly": true
+    },
+    {
+      "label": "ARL Asociada",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_00e5gx4",
+        "columns": null
+      },
+      "id": "Field_17xcojv",
+      "key": "textfield_wfmhg7",
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "uploadFile",
+        "limitSize": "5 MB",
+        "allowExtensions": "pdf"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Separator",
+      "type": "separator",
+      "layout": {
+        "row": "Row_02f2o30",
+        "columns": null
+      },
+      "id": "Field_1ahq9tr"
+    },
+    {
+      "label": "Lugar en el que realizó sus funciones la mayor parte del tiempo. Proporcione una dirección de ser posible y la descripción del lugar.",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0bxtl7i",
+        "columns": null
+      },
+      "id": "Field_0yquh2d",
+      "key": "textarea_8qxs8i",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "label": "Detalle sus servicios realizados durante el período indicado; describa las funciones realizadas durante el proyecto de una forma breve y concisa, por favor.",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1f7xt4p",
+        "columns": null
+      },
+      "id": "Field_0kgg5w0",
+      "key": "textarea_0xwwtc",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "values": [
+        {
+          "label": "Presencial",
+          "value": "Presencial"
+        },
+        {
+          "label": "Remoto",
+          "value": "Remoto"
+        },
+        {
+          "label": "Híbrida",
+          "value": "Hibrida"
+        }
+      ],
+      "label": "Modalidad de trabajo",
+      "type": "select",
+      "layout": {
+        "row": "Row_0q0gkxw",
+        "columns": null
+      },
+      "id": "Field_18xnhz4",
+      "key": "select_isl9f",
+      "validate": {
+        "required": true
+      },
+      "readonly": true
+    },
+    {
+      "label": "Separator",
+      "type": "separator",
+      "layout": {
+        "row": "Row_1tsljya",
+        "columns": null
+      },
+      "id": "Field_1eagn6d"
+    },
+    {
+      "values": [
+        {
+          "label": "Si",
+          "value": "Si"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "¿Aprueba la revisión técnica?",
+      "type": "radio",
+      "layout": {
+        "row": "Row_186pa25",
+        "columns": null
+      },
+      "id": "Field_0wgiawl",
+      "key": "aprueba_revision_tec"
+    },
+    {
+      "label": "Comentarios para sugerir cambios a los colaboradores.",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1g8rg1u",
+        "columns": null
+      },
+      "id": "Field_11lzako",
+      "key": "textfield_h5v0l",
+      "validate": {
+        "required": true
+      },
+      "conditional": {
+        "hide": "=aprueba_revision_tec != \"No\""
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Terminar revisión",
+      "type": "button",
+      "layout": {
+        "row": "Row_02eis9s",
+        "columns": null
+      },
+      "id": "Field_0zmhspw",
+      "key": "field_0ede1b4",
+      "properties": {
+        "type": "submit"
+      }
+    }
+  ],
+  "type": "default",
+  "id": "aprobar_revisor_tecnico",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.25.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 16
+}
