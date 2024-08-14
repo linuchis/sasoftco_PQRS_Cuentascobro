@@ -1,23 +1,43 @@
 {
   "components": [
     {
-      "text": "# Revisión jefe técnico: Cuentas de colaboradores en proyectos SASOFTCO",
+      "text": "### Revisión jefe técnico: Cuentas de colaboradores en proyectos SASOFTCO",
       "label": "Text view",
       "type": "text",
       "layout": {
         "row": "Row_1f7xugj",
         "columns": null
       },
-      "id": "Field_0q9r0bg"
+      "id": "Field_0q9r0bg",
+      "properties": {
+        "type": "markdown"
+      }
     },
     {
-      "label": "Separator",
-      "type": "separator",
+      "text": "Tabs",
+      "label": "Text view",
+      "type": "text",
       "layout": {
-        "row": "Row_0yy0d8z",
+        "row": "Row_0awp87z",
         "columns": null
       },
-      "id": "Field_1ak8dzz"
+      "id": "Field_0g4gxy6",
+      "properties": {
+        "type": "startTabs"
+      }
+    },
+    {
+      "text": "Información general",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_114lt5c",
+        "columns": null
+      },
+      "id": "Field_0wfkr31",
+      "properties": {
+        "type": "tab"
+      }
     },
     {
       "text": "El presente formulario se realiza con el fin de recopilar los datos de cuentas de cobro de nuestros colaboradores cuyo contrato se encuentra como Operario por Prestación de Servicios (OPS), esto con el propósito de garantizar efectividad en los trámites internos.",
@@ -58,7 +78,10 @@
       "validate": {
         "required": true
       },
-      "readonly": true
+      "readonly": true,
+      "properties": {
+        "type": "text"
+      }
     },
     {
       "label": "Celular",
@@ -73,7 +96,7 @@
         "required": true
       },
       "properties": {
-        "type": "number"
+        "type": "digit"
       },
       "readonly": true
     },
@@ -89,7 +112,10 @@
       "validate": {
         "required": true
       },
-      "readonly": true
+      "readonly": true,
+      "properties": {
+        "type": "email"
+      }
     },
     {
       "label": "Dirección de residencia",
@@ -103,7 +129,10 @@
       "validate": {
         "required": true
       },
-      "readonly": true
+      "readonly": true,
+      "properties": {
+        "type": "text"
+      }
     },
     {
       "values": [
@@ -127,7 +156,10 @@
       "validate": {
         "required": true
       },
-      "readonly": true
+      "readonly": true,
+      "properties": {
+        "type": "select"
+      }
     },
     {
       "label": "Número de documento",
@@ -142,7 +174,7 @@
         "required": true
       },
       "properties": {
-        "type": "text"
+        "type": "select"
       },
       "readonly": true
     },
@@ -168,7 +200,10 @@
       "validate": {
         "required": true
       },
-      "readonly": true
+      "readonly": true,
+      "properties": {
+        "type": "select"
+      }
     },
     {
       "label": "Número de tarjeta profesional",
@@ -183,7 +218,7 @@
         "required": true
       },
       "properties": {
-        "type": "text"
+        "type": "digit"
       },
       "conditional": {
         "hide": "=titulo_universitario != \"Sí\""
@@ -204,7 +239,10 @@
       "validate": {
         "required": true
       },
-      "readonly": true
+      "readonly": true,
+      "properties": {
+        "type": "datepicker"
+      }
     },
     {
       "subtype": "date",
@@ -220,7 +258,10 @@
       "validate": {
         "required": true
       },
-      "readonly": true
+      "readonly": true,
+      "properties": {
+        "type": "datepicker"
+      }
     },
     {
       "label": "Valor a cobrar",
@@ -234,16 +275,10 @@
       "validate": {
         "required": true
       },
-      "readonly": true
-    },
-    {
-      "label": "Separator",
-      "type": "separator",
-      "layout": {
-        "row": "Row_1gote4y",
-        "columns": null
-      },
-      "id": "Field_1eyjmy4"
+      "readonly": true,
+      "properties": {
+        "type": "digit"
+      }
     },
     {
       "text": "Anexos de documentación",
@@ -253,43 +288,30 @@
         "row": "Row_050d465",
         "columns": null
       },
-      "id": "Field_1832utz"
+      "id": "Field_1832utz",
+      "properties": {
+        "type": "tab"
+      }
     },
     {
-      "components": [
-        {
-          "label": "Cuenta de cobro dirigida a SASOFTCO",
-          "type": "textfield",
-          "layout": {
-            "row": "Row_1bewrnp",
-            "columns": null
-          },
-          "id": "Field_0czgpal",
-          "key": "cuenta_cobro",
-          "validate": {
-            "required": true
-          },
-          "properties": {
-            "type": "uploadFile",
-            "limitSize": "5 MB",
-            "allowExtensions": "pdf"
-          },
-          "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
-          "readonly": true
-        }
-      ],
-      "showOutline": true,
-      "isRepeating": true,
-      "allowAddRemove": true,
-      "defaultRepetitions": 1,
-      "label": "Puede añadir las cuentas de cobro necesarias en la presente sección. ",
-      "type": "dynamiclist",
+      "label": "Cuenta de cobro dirigida a SASOFTCO",
+      "type": "textfield",
       "layout": {
-        "row": "Row_1tzt9x6",
+        "row": "Row_09c72x2",
         "columns": null
       },
-      "id": "Field_160zytq",
-      "path": "dynamiclist_78tnoh"
+      "id": "Field_0czgpal",
+      "key": "cuenta_cobro",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "uploadFile",
+        "limitSize": "5 MB",
+        "allowExtensions": "pdf,rar,zip"
+      },
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB. En caso de ser más de una cuenta de cobro anexe un archivo .zip",
+      "readonly": true
     },
     {
       "label": "Certificado bancario",
@@ -372,15 +394,6 @@
       "readonly": true
     },
     {
-      "label": "Separator",
-      "type": "separator",
-      "layout": {
-        "row": "Row_02f2o30",
-        "columns": null
-      },
-      "id": "Field_1ahq9tr"
-    },
-    {
       "label": "Lugar en el que realizó sus funciones la mayor parte del tiempo. Proporcione una dirección de ser posible y la descripción del lugar.",
       "type": "textarea",
       "layout": {
@@ -391,6 +404,9 @@
       "key": "textarea_8qxs8i",
       "validate": {
         "required": true
+      },
+      "properties": {
+        "type": "textarea"
       },
       "readonly": true
     },
@@ -405,6 +421,9 @@
       "key": "textarea_0xwwtc",
       "validate": {
         "required": true
+      },
+      "properties": {
+        "type": "textarea"
       },
       "readonly": true
     },
@@ -434,16 +453,10 @@
       "validate": {
         "required": true
       },
-      "readonly": true
-    },
-    {
-      "label": "Separator",
-      "type": "separator",
-      "layout": {
-        "row": "Row_1tsljya",
-        "columns": null
+      "properties": {
+        "type": "select"
       },
-      "id": "Field_1eagn6d"
+      "readonly": true
     },
     {
       "values": [
@@ -463,7 +476,10 @@
         "columns": null
       },
       "id": "Field_0wgiawl",
-      "key": "aprueba_revision_tec"
+      "key": "aprueba_revision_tec",
+      "properties": {
+        "type": "select"
+      }
     },
     {
       "label": "Comentarios para sugerir cambios a los colaboradores.",
@@ -473,12 +489,15 @@
         "columns": null
       },
       "id": "Field_11lzako",
-      "key": "textfield_h5v0l",
+      "key": "comentarios_tec",
       "validate": {
         "required": true
       },
       "conditional": {
         "hide": "=aprueba_revision_tec != \"No\""
+      },
+      "properties": {
+        "type": "text"
       }
     },
     {
@@ -486,7 +505,7 @@
       "label": "Terminar revisión",
       "type": "button",
       "layout": {
-        "row": "Row_02eis9s",
+        "row": "Row_1qgs8je",
         "columns": null
       },
       "id": "Field_0zmhspw",
@@ -494,13 +513,27 @@
       "properties": {
         "type": "submit"
       }
+    },
+    {
+      "text": "Tabs",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_02eis9s",
+        "columns": null
+      },
+      "id": "Field_14217jd",
+      "properties": {
+        "type": "endTabs"
+      }
     }
   ],
   "type": "default",
+  "typeForm": "tabs",
   "id": "aprobar_revisor_tecnico",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.25.0"
+    "version": "5.26.0"
   },
   "executionPlatform": "Camunda Platform",
   "executionPlatformVersion": "7.19.0",

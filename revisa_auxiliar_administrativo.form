@@ -473,7 +473,7 @@
         "columns": null
       },
       "id": "Field_168lfxh",
-      "key": "textfield_zdfaf",
+      "key": "comentarios_aux_adm",
       "conditional": {
         "hide": "=aprueba_aux_adm != \"No\""
       }
@@ -497,7 +497,7 @@
   "id": "aprobar_aux_adm",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.25.0"
+    "version": "5.26.0"
   },
   "executionPlatform": "Camunda Platform",
   "executionPlatformVersion": "7.19.0",
