@@ -113,7 +113,7 @@
       <bpmn:outgoing>Flow_0r3t9k4</bpmn:outgoing>
       <bpmn:outgoing>Flow_1qhy7ts</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:userTask id="Activity_0ch0bf6" name="Revisa documentación" camunda:formRef="aprobar_aux_adm" camunda:formRefBinding="latest">
+    <bpmn:userTask id="Activity_0ch0bf6" name="Revisa documentación" camunda:formRef="aprobar_aux_adm" camunda:formRefBinding="latest" camunda:assignee="Ligia" camunda:candidateGroups="auxiliar_administrativo">
       <bpmn:incoming>Flow_0irvruq</bpmn:incoming>
       <bpmn:outgoing>Flow_0zqbzno</bpmn:outgoing>
     </bpmn:userTask>
@@ -121,7 +121,7 @@
       <bpmn:incoming>Flow_1d8jkev</bpmn:incoming>
       <bpmn:outgoing>Flow_02c9fjd</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Activity_0hvisak" name="Aprobar revisión administrativa" camunda:formRef="aprobar_revisor_administrativo" camunda:formRefBinding="latest">
+    <bpmn:userTask id="Activity_0hvisak" name="Aprobar revisión administrativa" camunda:formRef="aprobar_revisor_administrativo" camunda:formRefBinding="latest" camunda:assignee="Elsa" camunda:candidateGroups="revisor_administrativo">
       <bpmn:incoming>Flow_0x5btv0</bpmn:incoming>
       <bpmn:outgoing>Flow_003w9mj</bpmn:outgoing>
     </bpmn:userTask>
@@ -183,10 +183,6 @@ Equipo SASOFTCO.</camunda:inputParameter>
       <bpmn:incoming>Flow_10abomh</bpmn:incoming>
       <bpmn:terminateEventDefinition id="TerminateEventDefinition_0peprwr" />
     </bpmn:endEvent>
-    <bpmn:manualTask id="Activity_1ajlzed" name="Aprueba gerente">
-      <bpmn:incoming>Flow_0m7i6jy</bpmn:incoming>
-      <bpmn:outgoing>Flow_1xki8on</bpmn:outgoing>
-    </bpmn:manualTask>
     <bpmn:sequenceFlow id="Flow_0vjaslg" sourceRef="Gateway_1nnl5r1" targetRef="Activity_11r96do" />
     <bpmn:sequenceFlow id="Flow_0ttih8i" sourceRef="Activity_1fls59e" targetRef="Gateway_1nnl5r1" />
     <bpmn:sequenceFlow id="Flow_02c9fjd" sourceRef="Activity_14e7un0" targetRef="Gateway_1nnl5r1" />
@@ -200,7 +196,7 @@ Equipo SASOFTCO.</camunda:inputParameter>
       <bpmn:incoming>Flow_0dc9207</bpmn:incoming>
       <bpmn:outgoing>Flow_0ttih8i</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Activity_11r96do" name="Aprobar revisión técnica" camunda:formRef="aprobar_revisor_tecnico" camunda:formRefBinding="latest">
+    <bpmn:userTask id="Activity_11r96do" name="Aprobar revisión técnica" camunda:formRef="aprobar_revisor_tecnico" camunda:formRefBinding="latest" camunda:assignee="Hugo" camunda:candidateGroups="revisor_tecnico">
       <bpmn:incoming>Flow_1ar1jz2</bpmn:incoming>
       <bpmn:incoming>Flow_0vjaslg</bpmn:incoming>
       <bpmn:outgoing>Flow_0vhb6n4</bpmn:outgoing>
@@ -246,6 +242,10 @@ Equipo SASOFTCO.</camunda:inputParameter>
       <bpmn:incoming>Flow_0r3t9k4</bpmn:incoming>
       <bpmn:outgoing>Flow_0uxca10</bpmn:outgoing>
     </bpmn:sendTask>
+    <bpmn:userTask id="Activity_1ajlzed" name="Aprueba gerente" camunda:assignee="Carlos" camunda:candidateGroups="gerente">
+      <bpmn:incoming>Flow_0m7i6jy</bpmn:incoming>
+      <bpmn:outgoing>Flow_1xki8on</bpmn:outgoing>
+    </bpmn:userTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0tuziu4">
@@ -328,9 +328,6 @@ Equipo SASOFTCO.</camunda:inputParameter>
           <dc:Bounds x="1634" y="195" width="81" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0mnbfo9_di" bpmnElement="Activity_1ajlzed">
-        <dc:Bounds x="1110" y="820" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1nnl5r1_di" bpmnElement="Gateway_1nnl5r1" isMarkerVisible="true">
         <dc:Bounds x="515" y="145" width="50" height="50" />
       </bpmndi:BPMNShape>
@@ -345,6 +342,9 @@ Equipo SASOFTCO.</camunda:inputParameter>
       <bpmndi:BPMNShape id="Activity_0m4zfe0_di" bpmnElement="mensaje_fallo">
         <dc:Bounds x="1220" y="120" width="100" height="80" />
         <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0xyvkfz_di" bpmnElement="Activity_1ajlzed">
+        <dc:Bounds x="1110" y="820" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1qhy7ts_di" bpmnElement="Flow_1qhy7ts">
         <di:waypoint x="1315" y="860" />
