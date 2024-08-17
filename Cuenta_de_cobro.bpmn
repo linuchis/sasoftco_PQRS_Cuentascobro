@@ -14,9 +14,9 @@
   <bpmn:process id="ModeloPagos" name="Pago OPS Sasoftco" isExecutable="true">
     <bpmn:laneSet id="LaneSet_0jqk2v3">
       <bpmn:lane id="Lane_08d59cg" name="Empleados">
-        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Event_0x6bity</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_14e7un0</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0x6bity</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>mensaje_exito</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_1nfkfoa</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_1nnl5r1</bpmn:flowNodeRef>
@@ -24,9 +24,9 @@
         <bpmn:flowNodeRef>mensaje_fallo</bpmn:flowNodeRef>
         <bpmn:childLaneSet id="LaneSet_1178lu1">
           <bpmn:lane id="Lane_115r8ih">
-            <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Event_0x6bity</bpmn:flowNodeRef>
             <bpmn:flowNodeRef>Activity_14e7un0</bpmn:flowNodeRef>
+            <bpmn:flowNodeRef>Event_0x6bity</bpmn:flowNodeRef>
+            <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
             <bpmn:flowNodeRef>mensaje_exito</bpmn:flowNodeRef>
             <bpmn:flowNodeRef>Event_1nfkfoa</bpmn:flowNodeRef>
             <bpmn:flowNodeRef>Gateway_1nnl5r1</bpmn:flowNodeRef>
@@ -46,12 +46,12 @@
         </bpmn:childLaneSet>
       </bpmn:lane>
       <bpmn:lane id="Lane_0d1rbrr" name="Revisor administrativo">
-        <bpmn:flowNodeRef>Gateway_0e36qhc</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0hvisak</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0e36qhc</bpmn:flowNodeRef>
         <bpmn:childLaneSet id="LaneSet_1q1hnpk">
           <bpmn:lane id="Lane_09k75gp">
-            <bpmn:flowNodeRef>Gateway_0e36qhc</bpmn:flowNodeRef>
             <bpmn:flowNodeRef>Activity_0hvisak</bpmn:flowNodeRef>
+            <bpmn:flowNodeRef>Gateway_0e36qhc</bpmn:flowNodeRef>
           </bpmn:lane>
         </bpmn:childLaneSet>
       </bpmn:lane>
@@ -66,23 +66,23 @@
         </bpmn:childLaneSet>
       </bpmn:lane>
       <bpmn:lane id="Lane_1oaxax9" name="Auxiliar Administrativo">
-        <bpmn:flowNodeRef>Gateway_1to3se4</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0ch0bf6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1to3se4</bpmn:flowNodeRef>
         <bpmn:childLaneSet id="LaneSet_0d5qz6h">
           <bpmn:lane id="Lane_0yx8bvf">
-            <bpmn:flowNodeRef>Gateway_1to3se4</bpmn:flowNodeRef>
             <bpmn:flowNodeRef>Activity_0ch0bf6</bpmn:flowNodeRef>
+            <bpmn:flowNodeRef>Gateway_1to3se4</bpmn:flowNodeRef>
           </bpmn:lane>
         </bpmn:childLaneSet>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:sequenceFlow id="Flow_1qhy7ts" name="Si" sourceRef="Gateway_0m8mvnv" targetRef="mensaje_exito">
       <bpmn:extensionElements />
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" />
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${aprueba_gerente=="Si"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1xki8on" sourceRef="Activity_1ajlzed" targetRef="Gateway_0m8mvnv" />
     <bpmn:sequenceFlow id="Flow_0r3t9k4" name="No" sourceRef="Gateway_0m8mvnv" targetRef="mensaje_fallo">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" />
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${aprueba_gerente=="No"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_10abomh" sourceRef="mensaje_exito" targetRef="Event_1nfkfoa" />
     <bpmn:sequenceFlow id="Flow_0uxca10" sourceRef="mensaje_fallo" targetRef="Event_0x6bity" />
@@ -113,7 +113,7 @@
       <bpmn:outgoing>Flow_0r3t9k4</bpmn:outgoing>
       <bpmn:outgoing>Flow_1qhy7ts</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:userTask id="Activity_0ch0bf6" name="Revisa documentación" camunda:formRef="aprobar_aux_adm" camunda:formRefBinding="latest" camunda:assignee="Ligia" camunda:candidateGroups="auxiliar_administrativo">
+    <bpmn:userTask id="Activity_0ch0bf6" name="Revisa documentación" camunda:formRef="aprobar_aux_adm" camunda:formRefBinding="latest" camunda:assignee="funcionario" camunda:candidateGroups="actor_auxiliar_administrativo">
       <bpmn:incoming>Flow_0irvruq</bpmn:incoming>
       <bpmn:outgoing>Flow_0zqbzno</bpmn:outgoing>
     </bpmn:userTask>
@@ -121,7 +121,7 @@
       <bpmn:incoming>Flow_1d8jkev</bpmn:incoming>
       <bpmn:outgoing>Flow_02c9fjd</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Activity_0hvisak" name="Aprobar revisión administrativa" camunda:formRef="aprobar_revisor_administrativo" camunda:formRefBinding="latest" camunda:assignee="Elsa" camunda:candidateGroups="revisor_administrativo">
+    <bpmn:userTask id="Activity_0hvisak" name="Aprobar revisión administrativa" camunda:formRef="aprobar_revisor_administrativo" camunda:formRefBinding="latest" camunda:assignee="funcionario" camunda:candidateGroups="actor_jefe_administrativo">
       <bpmn:incoming>Flow_0x5btv0</bpmn:incoming>
       <bpmn:outgoing>Flow_003w9mj</bpmn:outgoing>
     </bpmn:userTask>
@@ -152,9 +152,20 @@
         <camunda:connector>
           <camunda:inputOutput>
             <camunda:inputParameter name="headers">
-              <camunda:map />
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+              </camunda:map>
             </camunda:inputParameter>
             <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:inputParameter name="url">${UrlLocalBackendCore}/api/ServiceTask/inform-email</camunda:inputParameter>
+            <camunda:inputParameter name="payload">{
+'to' :   '${Correo}',
+'subject':  '${subject}',
+'bodyEmail':  '${bodyEmail}',
+'secret_key':  '${secret_key}',
+'phone': '${Ntelefono}',
+'SMS': '${SMS}'
+}</camunda:inputParameter>
           </camunda:inputOutput>
           <camunda:connectorId>http-connector</camunda:connectorId>
         </camunda:connector>
@@ -174,6 +185,7 @@ Atentamente,
 &lt;br&gt;
 Equipo SASOFTCO.</camunda:inputParameter>
           <camunda:inputParameter name="subject">Confirmación de Trámite Exitoso - Pago en Proceso</camunda:inputParameter>
+          <camunda:inputParameter name="SMS">Estimado ${Nombre},  El de radicado de su trámite en Sasoftco  es:  ${NRadicado}.</camunda:inputParameter>
         </camunda:inputOutput>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_1qhy7ts</bpmn:incoming>
@@ -196,7 +208,7 @@ Equipo SASOFTCO.</camunda:inputParameter>
       <bpmn:incoming>Flow_0dc9207</bpmn:incoming>
       <bpmn:outgoing>Flow_0ttih8i</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Activity_11r96do" name="Aprobar revisión técnica" camunda:formRef="aprobar_revisor_tecnico" camunda:formRefBinding="latest" camunda:assignee="Hugo" camunda:candidateGroups="revisor_tecnico">
+    <bpmn:userTask id="Activity_11r96do" name="Aprobar revisión técnica" camunda:formRef="aprobar_revisor_tecnico" camunda:formRefBinding="latest" camunda:assignee="funcionario" camunda:candidateGroups="revisor_tecnico">
       <bpmn:incoming>Flow_1ar1jz2</bpmn:incoming>
       <bpmn:incoming>Flow_0vjaslg</bpmn:incoming>
       <bpmn:outgoing>Flow_0vhb6n4</bpmn:outgoing>
@@ -206,7 +218,9 @@ Equipo SASOFTCO.</camunda:inputParameter>
         <camunda:connector>
           <camunda:inputOutput>
             <camunda:inputParameter name="headers">
-              <camunda:map />
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+              </camunda:map>
             </camunda:inputParameter>
             <camunda:inputParameter name="method">POST</camunda:inputParameter>
             <camunda:inputParameter name="url">${UrlLocalBackendCore}/api/ServiceTask/inform-email</camunda:inputParameter>
@@ -237,12 +251,13 @@ Atentamente,
 &lt;br&gt;
 Equipo SASOFTCO.</camunda:inputParameter>
           <camunda:inputParameter name="subject">Rechazo de Cuenta de Cobro - Acción Requerida</camunda:inputParameter>
+          <camunda:inputParameter name="SMS">Estimado ${Nombre},  El de radicado de su trámite en Sasoftco  es:  ${NRadicado}.</camunda:inputParameter>
         </camunda:inputOutput>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0r3t9k4</bpmn:incoming>
       <bpmn:outgoing>Flow_0uxca10</bpmn:outgoing>
     </bpmn:sendTask>
-    <bpmn:userTask id="Activity_1ajlzed" name="Aprueba gerente" camunda:assignee="Carlos" camunda:candidateGroups="gerente">
+    <bpmn:userTask id="Activity_1ajlzed" name="Aprueba gerente" camunda:formRef="aprobar_gerente" camunda:formRefBinding="latest" camunda:assignee="funcionario" camunda:candidateGroups="actor_gerente">
       <bpmn:incoming>Flow_0m7i6jy</bpmn:incoming>
       <bpmn:outgoing>Flow_1xki8on</bpmn:outgoing>
     </bpmn:userTask>
@@ -344,7 +359,7 @@ Equipo SASOFTCO.</camunda:inputParameter>
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0xyvkfz_di" bpmnElement="Activity_1ajlzed">
-        <dc:Bounds x="1110" y="820" width="100" height="80" />
+        <dc:Bounds x="1100" y="820" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1qhy7ts_di" bpmnElement="Flow_1qhy7ts">
         <di:waypoint x="1315" y="860" />
@@ -355,7 +370,7 @@ Equipo SASOFTCO.</camunda:inputParameter>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1xki8on_di" bpmnElement="Flow_1xki8on">
-        <di:waypoint x="1210" y="860" />
+        <di:waypoint x="1200" y="860" />
         <di:waypoint x="1265" y="860" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0r3t9k4_di" bpmnElement="Flow_0r3t9k4">
@@ -379,7 +394,7 @@ Equipo SASOFTCO.</camunda:inputParameter>
         <di:waypoint x="1055" y="700" />
         <di:waypoint x="1080" y="700" />
         <di:waypoint x="1080" y="860" />
-        <di:waypoint x="1110" y="860" />
+        <di:waypoint x="1100" y="860" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1090" y="777" width="11" height="14" />
         </bpmndi:BPMNLabel>

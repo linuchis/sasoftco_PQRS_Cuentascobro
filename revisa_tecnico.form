@@ -47,7 +47,10 @@
         "row": "Row_0jx34me",
         "columns": null
       },
-      "id": "Field_0yada4c"
+      "id": "Field_0yada4c",
+      "properties": {
+        "type": "markdown"
+      }
     },
     {
       "label": "Nombres",
@@ -91,7 +94,7 @@
         "columns": null
       },
       "id": "Field_19xonlr",
-      "key": "celular",
+      "key": "Ntelefono",
       "validate": {
         "required": true
       },
@@ -108,7 +111,7 @@
         "columns": null
       },
       "id": "Field_0x81r21",
-      "key": "correo_electronico",
+      "key": "Correo",
       "validate": {
         "required": true
       },
@@ -174,7 +177,7 @@
         "required": true
       },
       "properties": {
-        "type": "select"
+        "type": "digit"
       },
       "readonly": true
     },
@@ -271,7 +274,7 @@
         "columns": null
       },
       "id": "Field_0rtthtz",
-      "key": "number_vj1ttc",
+      "key": "valor_cobrar",
       "validate": {
         "required": true
       },
@@ -306,9 +309,7 @@
         "required": true
       },
       "properties": {
-        "type": "uploadFile",
-        "limitSize": "5 MB",
-        "allowExtensions": "pdf,rar,zip"
+        "type": "viewerFile"
       },
       "description": "Tipo de archivo permitido .pdf hasta de 5 MB. En caso de ser más de una cuenta de cobro anexe un archivo .zip",
       "readonly": true
@@ -327,9 +328,7 @@
         "required": true
       },
       "properties": {
-        "type": "uploadFile",
-        "limitSize": "5 MB",
-        "allowExtensions": "pdf"
+        "type": "viewerFile"
       },
       "readonly": true
     },
@@ -347,9 +346,7 @@
       },
       "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
       "properties": {
-        "type": "uploadFile",
-        "limitSize": "5 MB",
-        "allowExtensions": "pdf"
+        "type": "viewerFile"
       },
       "readonly": true
     },
@@ -361,15 +358,13 @@
         "columns": null
       },
       "id": "Field_1l9bp7j",
-      "key": "textfield_pkpry",
+      "key": "seg_social",
       "validate": {
         "required": true
       },
       "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
       "properties": {
-        "type": "uploadFile",
-        "limitSize": "5 MB",
-        "allowExtensions": "pdf"
+        "type": "viewerFile"
       },
       "readonly": true
     },
@@ -381,15 +376,13 @@
         "columns": null
       },
       "id": "Field_17xcojv",
-      "key": "textfield_wfmhg7",
+      "key": "ARL",
       "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
       "validate": {
         "required": true
       },
       "properties": {
-        "type": "uploadFile",
-        "limitSize": "5 MB",
-        "allowExtensions": "pdf"
+        "type": "viewerFile"
       },
       "readonly": true
     },
@@ -401,7 +394,7 @@
         "columns": null
       },
       "id": "Field_0yquh2d",
-      "key": "textarea_8qxs8i",
+      "key": "lugar",
       "validate": {
         "required": true
       },
@@ -418,7 +411,7 @@
         "columns": null
       },
       "id": "Field_0kgg5w0",
-      "key": "textarea_0xwwtc",
+      "key": "servicios_realizados",
       "validate": {
         "required": true
       },
@@ -449,7 +442,7 @@
         "columns": null
       },
       "id": "Field_18xnhz4",
-      "key": "select_isl9f",
+      "key": "modalidad_trabajo",
       "validate": {
         "required": true
       },
@@ -533,7 +526,7 @@
   "id": "aprobar_revisor_tecnico",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.26.0"
+    "version": "5.25.0"
   },
   "executionPlatform": "Camunda Platform",
   "executionPlatformVersion": "7.19.0",

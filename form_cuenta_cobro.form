@@ -78,7 +78,7 @@
       "id": "Field_1qzoszt",
       "key": "apellidos",
       "validate": {
-        "required": true
+        "required": false
       },
       "properties": {
         "type": "text"
@@ -92,7 +92,7 @@
         "columns": null
       },
       "id": "Field_19xonlr",
-      "key": "celular",
+      "key": "Ntelefono",
       "validate": {
         "required": true
       },
@@ -108,7 +108,7 @@
         "columns": null
       },
       "id": "Field_0x81r21",
-      "key": "correo_electronico",
+      "key": "Correo",
       "validate": {
         "required": true
       },
@@ -124,9 +124,9 @@
         "columns": null
       },
       "id": "Field_0jl84ka",
-      "key": "textfield_g81wq6",
+      "key": "direccion_residencia",
       "validate": {
-        "required": true
+        "required": false
       },
       "properties": {
         "type": "text"
@@ -152,7 +152,7 @@
       "id": "Field_02vq31s",
       "key": "tipo_documento",
       "validate": {
-        "required": true
+        "required": false
       },
       "properties": {
         "type": "select"
@@ -168,7 +168,7 @@
       "id": "Field_0c2yjik",
       "key": "numero_documento",
       "validate": {
-        "required": true
+        "required": false
       },
       "properties": {
         "type": "digit"
@@ -194,7 +194,7 @@
       "id": "Field_0mhe9wy",
       "key": "titulo_universitario",
       "validate": {
-        "required": true
+        "required": false
       },
       "properties": {
         "type": "select"
@@ -210,7 +210,7 @@
       "id": "Field_0jxc0sx",
       "key": "numero_tarjeta",
       "validate": {
-        "required": true
+        "required": false
       },
       "properties": {
         "type": "digit"
@@ -231,7 +231,7 @@
       "id": "Field_0kmy9m5",
       "key": "fecha_inicio",
       "validate": {
-        "required": true
+        "required": false
       },
       "properties": {
         "type": "datepicker"
@@ -249,7 +249,7 @@
       "id": "Field_1wupjx5",
       "key": "fecha_fin",
       "validate": {
-        "required": true
+        "required": false
       },
       "properties": {
         "type": "datepicker"
@@ -263,9 +263,9 @@
         "columns": null
       },
       "id": "Field_0rtthtz",
-      "key": "number_vj1ttc",
+      "key": "valor_cobrar",
       "validate": {
-        "required": true
+        "required": false
       },
       "properties": {
         "type": "digit"
@@ -294,7 +294,7 @@
       "id": "Field_0czgpal",
       "key": "cuenta_cobro",
       "validate": {
-        "required": true
+        "required": false
       },
       "properties": {
         "type": "uploadFile",
@@ -314,7 +314,7 @@
       "key": "certificado_banco",
       "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
       "validate": {
-        "required": true
+        "required": false
       },
       "properties": {
         "type": "uploadFile",
@@ -332,7 +332,7 @@
       "id": "Field_1xiyv4a",
       "key": "RUT",
       "validate": {
-        "required": true
+        "required": false
       },
       "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
       "properties": {
@@ -349,9 +349,9 @@
         "columns": null
       },
       "id": "Field_1l9bp7j",
-      "key": "textfield_pkpry",
+      "key": "seg_social",
       "validate": {
-        "required": true
+        "required": false
       },
       "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
       "properties": {
@@ -368,10 +368,10 @@
         "columns": null
       },
       "id": "Field_17xcojv",
-      "key": "textfield_wfmhg7",
+      "key": "ARL",
       "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
       "validate": {
-        "required": true
+        "required": false
       },
       "properties": {
         "type": "uploadFile",
@@ -387,7 +387,7 @@
         "columns": null
       },
       "id": "Field_0yquh2d",
-      "key": "textarea_8qxs8i",
+      "key": "lugar",
       "validate": {
         "required": true
       },
@@ -403,7 +403,7 @@
         "columns": null
       },
       "id": "Field_0kgg5w0",
-      "key": "textarea_0xwwtc",
+      "key": "servicios_realizados",
       "validate": {
         "required": true
       },
@@ -433,7 +433,7 @@
         "columns": null
       },
       "id": "Field_18xnhz4",
-      "key": "select_isl9f",
+      "key": "modalidad_trabajo",
       "validate": {
         "required": true
       },
