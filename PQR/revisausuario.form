@@ -1,0 +1,119 @@
+{
+  "components": [
+    {
+      "text": "# Solución planteada",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18dsu5f",
+        "columns": null
+      },
+      "id": "Field_0bh4vxt",
+      "properties": {
+        "type": "markdonw"
+      }
+    },
+    {
+      "label": "Descripción de la solicitud",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0j7b5m0",
+        "columns": null
+      },
+      "id": "Field_082kb5c",
+      "key": "Description",
+      "description": "Escribe acerca de tu solicitud",
+      "validate": {
+        "required": false,
+        "maxLength": 5000
+      },
+      "properties": {
+        "type": "text"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Anexo de solicitud",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ygk3sk",
+        "columns": null
+      },
+      "id": "Field_0ircz47",
+      "key": "Anexo",
+      "conditional": {
+        "hide": "=Modo_value = \"Cita\""
+      },
+      "properties": {
+        "type": "viewerFile"
+      }
+    },
+    {
+      "label": "Descripción de la solución",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0kisiex",
+        "columns": null
+      },
+      "id": "Field_082kb5d",
+      "key": "Solution",
+      "validate": {
+        "required": true,
+        "maxLength": 5000
+      },
+      "properties": {
+        "type": "text"
+      },
+      "conditional": {
+        "hide": "=Modo = \"Cita\""
+      },
+      "readonly": true
+    },
+    {
+      "values": [
+        {
+          "label": "Si",
+          "value": "Si"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "Cumple?",
+      "type": "radio",
+      "layout": {
+        "row": "Row_0m8m8y3",
+        "columns": null
+      },
+      "id": "Field_0qu4wfs",
+      "key": "Aprob",
+      "properties": {
+        "type": "radioList"
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Avanzar",
+      "type": "button",
+      "layout": {
+        "row": "Row_19gs5ej",
+        "columns": null
+      },
+      "id": "Field_06h8w6l",
+      "key": "field_1ahj40r",
+      "properties": {
+        "type": "submit"
+      }
+    }
+  ],
+  "type": "default",
+  "id": "PQFinal",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.22.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.20.0",
+  "schemaVersion": 16
+}
