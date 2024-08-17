@@ -1,0 +1,172 @@
+{
+  "components": [
+    {
+      "text": "## Radicar PQRSD\n\nLos campos marcados con (*) son obligatorios",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0sdptxt",
+        "columns": null
+      },
+      "id": "Field_04xfn78",
+      "properties": {
+        "type": "markdown"
+      }
+    },
+    {
+      "text": "Datos del solicitante",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1gue97h",
+        "columns": null
+      },
+      "id": "Datos_Del_Proyecto",
+      "properties": {
+        "type": "tab"
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Radicar online",
+          "value": "Online"
+        },
+        {
+          "label": "Programar cita",
+          "value": "Cita"
+        }
+      ],
+      "label": "Pedir cita o realizar online",
+      "type": "select",
+      "layout": {
+        "row": "Row_0gmdzil",
+        "columns": null
+      },
+      "id": "Field_0ax7svz",
+      "key": "Modo",
+      "defaultValue": "Online",
+      "properties": {
+        "type": "select"
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Llenar de forma anónima",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1od4roy",
+        "columns": null
+      },
+      "id": "Field_0zko4m2",
+      "key": "annon",
+      "conditional": {
+        "hide": "=Modo_value = \"Cita\""
+      },
+      "properties": {
+        "type": "checkbox"
+      }
+    },
+    {
+      "text": "### Anónimo",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_06aktvd",
+        "columns": null
+      },
+      "id": "Field_0xg5k1v",
+      "properties": {
+        "type": "markdown"
+      },
+      "conditional": {
+        "hide": "=annon != true"
+      }
+    },
+    {
+      "label": "Descripción de la solicitud",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0j7b5m0",
+        "columns": null
+      },
+      "id": "Field_082kb5c",
+      "key": "Description",
+      "description": "Escribe acerca de tu solicitud",
+      "validate": {
+        "required": false,
+        "maxLength": 5000
+      },
+      "properties": {
+        "type": "text"
+      },
+      "conditional": {
+        "hide": "=Modo_value = \"Cita\""
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Por correo electrónico",
+          "value": "CE"
+        },
+        {
+          "label": "Por correspondencia física",
+          "value": "CF"
+        },
+        {
+          "label": "Por teléfono",
+          "value": "TEL"
+        },
+        {
+          "label": "Seguimiento por ticket",
+          "value": "TICK"
+        }
+      ],
+      "label": "Método de notificación",
+      "type": "select",
+      "layout": {
+        "row": "Row_1urpr3q",
+        "columns": null
+      },
+      "id": "Field_0nocccp",
+      "key": "Notif",
+      "description": "Selecciona el medio por el que te gustaria recibir la respuesta a tu solicitud ",
+      "conditional": {
+        "hide": "=Modo_value = \"Cita\""
+      },
+      "properties": {
+        "type": "select"
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Radicar",
+      "type": "button",
+      "layout": {
+        "row": "Row_19gs5ej",
+        "columns": null
+      },
+      "id": "Field_06h8w6l",
+      "key": "field_1ahj40r",
+      "properties": {
+        "type": "submit"
+      },
+      "conditional": {
+        "hide": "=Modo_value = \"Cita\""
+      }
+    }
+  ],
+  "type": "default",
+  "typeForm": "tabs",
+  "id": "PQradicar",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.22.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 16
+}

@@ -1,0 +1,59 @@
+{
+  "components": [
+    {
+      "text": "# Registro de cita",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18dsu5f",
+        "columns": null
+      },
+      "id": "Field_0bh4vxt",
+      "properties": {
+        "type": "markdonw"
+      }
+    },
+    {
+      "label": "Datos de registro",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0j7b5m0",
+        "columns": null
+      },
+      "id": "Field_082kb5c",
+      "key": "Solution",
+      "validate": {
+        "required": true,
+        "maxLength": 5000
+      },
+      "properties": {
+        "type": "text"
+      },
+      "conditional": {},
+      "readonly": true
+    },
+    {
+      "action": "submit",
+      "label": "Avanzar",
+      "type": "button",
+      "layout": {
+        "row": "Row_19gs5ej",
+        "columns": null
+      },
+      "id": "Field_06h8w6l",
+      "key": "field_1ahj40r",
+      "properties": {
+        "type": "submit"
+      }
+    }
+  ],
+  "type": "default",
+  "id": "PQ_Cita",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.22.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.20.0",
+  "schemaVersion": 16
+}

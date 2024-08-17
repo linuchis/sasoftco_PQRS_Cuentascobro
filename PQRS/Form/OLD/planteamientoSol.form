@@ -1,0 +1,74 @@
+{
+  "components": [
+    {
+      "text": "# Planteamiento de la solución",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18dsu5f",
+        "columns": null
+      },
+      "id": "Field_0bh4vxt",
+      "properties": {
+        "type": "markdonw"
+      }
+    },
+    {
+      "text": "Descripción",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1gue97h",
+        "columns": null
+      },
+      "id": "Datos_Del_Proyecto",
+      "properties": {
+        "type": "tab"
+      }
+    },
+    {
+      "label": "Descripción de la solución",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0j7b5m0",
+        "columns": null
+      },
+      "id": "Field_082kb5c",
+      "key": "Solution",
+      "validate": {
+        "required": true,
+        "maxLength": 5000
+      },
+      "properties": {
+        "type": "text"
+      },
+      "conditional": {
+        "hide": "=Modo = \"Cita\""
+      },
+      "readonly": false
+    },
+    {
+      "action": "submit",
+      "label": "Avanzar",
+      "type": "button",
+      "layout": {
+        "row": "Row_19gs5ej",
+        "columns": null
+      },
+      "id": "Field_06h8w6l",
+      "key": "field_1ahj40r",
+      "properties": {
+        "type": "submit"
+      }
+    }
+  ],
+  "type": "default",
+  "id": "PQPlantear",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.20.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.20.0",
+  "schemaVersion": 15
+}
