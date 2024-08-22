@@ -1,29 +1,16 @@
 {
   "components": [
     {
-      "text": "### Radicar PQRSD\n\nLos campos marcados con (*) son obligatorios",
+      "text": "### Revisa: Jefe administrativo",
       "label": "Text view",
       "type": "text",
       "layout": {
-        "row": "Row_0sdptxt",
+        "row": "Row_18dsu5f",
         "columns": null
       },
-      "id": "Field_04xfn78",
+      "id": "Field_0bh4vxt",
       "properties": {
         "type": "markdown"
-      }
-    },
-    {
-      "text": "Tabs",
-      "label": "Text view",
-      "type": "text",
-      "layout": {
-        "row": "Row_1cppt5v",
-        "columns": null
-      },
-      "id": "Field_1dtna4m",
-      "properties": {
-        "type": "startTabs"
       }
     },
     {
@@ -40,100 +27,21 @@
       }
     },
     {
-      "label": "¿Desea continuar de manera anónima?",
-      "type": "checkbox",
-      "layout": {
-        "row": "Row_0er7534",
-        "columns": null
-      },
-      "id": "Field_08y56bb",
-      "key": "annon",
-      "properties": {
-        "type": "checkbox"
-      }
-    },
-    {
-      "values": [
-        {
-          "label": "Si",
-          "value": "Si"
-        },
-        {
-          "label": "No",
-          "value": "No"
-        }
-      ],
-      "label": "Desea agendar una cita?",
-      "type": "select",
-      "layout": {
-        "row": "Row_11i4zb8",
-        "columns": null
-      },
-      "id": "Field_16e3hts",
-      "key": "Cita",
-      "validate": {
-        "required": true
-      },
-      "properties": {
-        "type": "select"
-      },
-      "defaultValue": "No",
-      "description": "Recuerde que la cita solo se puede solicitar de manera no anónima."
-    },
-    {
-      "text": "Se recopilan datos personales básicos de identificación que son tratados conforme con la pólitica de datos personales dy privacidad que puede consultar en el linkl de póliticas. La respuesta se envíia directamente a su correo electrónico o dirección física, según coresponda.",
-      "label": "Text view",
-      "type": "text",
-      "layout": {
-        "row": "Row_1cavqya",
-        "columns": 16
-      },
-      "id": "Field_0uktmzg",
-      "conditional": {
-        "hide": "=annon = true"
-      },
-      "properties": {
-        "type": "markdown"
-      }
-    },
-    {
-      "values": [
-        {
-          "label": "Persona natural",
-          "value": "P_Natural"
-        },
-        {
-          "label": "Persona jurídica",
-          "value": "P_Juri"
-        },
-        {
-          "label": "Niños, niñas y adolecentes",
-          "value": "N_Adole"
-        },
-        {
-          "label": "Apoderado",
-          "value": "Apod"
-        }
-      ],
       "label": "Tipo de persona",
-      "type": "select",
+      "type": "textfield",
       "layout": {
         "row": "Row_0siijqt",
-        "columns": 8
+        "columns": null
       },
-      "id": "Field_09wy4ee",
+      "id": "Field_080dgmp",
       "key": "Tperson",
-      "searchable": false,
+      "readonly": true,
       "properties": {
-        "type": "select"
+        "type": "text"
       },
       "conditional": {
         "hide": "=annon = true"
-      },
-      "validate": {
-        "required": true
-      },
-      "defaultValue": "<none>"
+      }
     },
     {
       "label": "Primer nombre",
@@ -148,12 +56,13 @@
         "type": "text"
       },
       "validate": {
-        "required": true,
+        "required": false,
         "maxLength": 100
       },
       "conditional": {
         "hide": "=annon = true"
-      }
+      },
+      "readonly": true
     },
     {
       "label": "Segundo nombre",
@@ -172,7 +81,8 @@
       },
       "validate": {
         "maxLength": 100
-      }
+      },
+      "readonly": true
     },
     {
       "label": "Primer apellido",
@@ -184,7 +94,7 @@
       "id": "Field_04lu6cz",
       "key": "Last_name",
       "validate": {
-        "required": true,
+        "required": false,
         "maxLength": 100
       },
       "properties": {
@@ -192,7 +102,8 @@
       },
       "conditional": {
         "hide": "=annon = true"
-      }
+      },
+      "readonly": true
     },
     {
       "label": "Segundo apellido",
@@ -211,7 +122,8 @@
       },
       "validate": {
         "maxLength": 100
-      }
+      },
+      "readonly": true
     },
     {
       "values": [
@@ -253,7 +165,8 @@
       "searchable": true,
       "conditional": {
         "hide": "=annon = true"
-      }
+      },
+      "readonly": true
     },
     {
       "label": "Número de identificación",
@@ -265,7 +178,7 @@
       "id": "Field_1qicsxh",
       "key": "N_identi",
       "validate": {
-        "required": true,
+        "required": false,
         "maxLength": 100
       },
       "properties": {
@@ -274,7 +187,8 @@
       },
       "conditional": {
         "hide": "=annon = true"
-      }
+      },
+      "readonly": true
     },
     {
       "subtype": "date",
@@ -295,7 +209,8 @@
       },
       "conditional": {
         "hide": "=annon = true"
-      }
+      },
+      "readonly": true
     },
     {
       "label": "Razón social",
@@ -307,7 +222,7 @@
       "id": "Field_0uutr8e",
       "key": "R_social",
       "validate": {
-        "required": true,
+        "required": false,
         "maxLength": 200
       },
       "conditional": {
@@ -315,7 +230,8 @@
       },
       "properties": {
         "type": "text"
-      }
+      },
+      "readonly": true
     },
     {
       "values": [
@@ -361,17 +277,14 @@
       },
       "properties": {
         "type": "select"
-      }
+      },
+      "readonly": true
     },
     {
       "values": [
         {
-          "label": "Colombia",
-          "value": "Colombia"
-        },
-        {
-          "label": "Otro",
-          "value": "Otro"
+          "label": "Value",
+          "value": "value"
         }
       ],
       "label": "País",
@@ -390,7 +303,8 @@
       },
       "conditional": {
         "hide": "=annon = true"
-      }
+      },
+      "readonly": true
     },
     {
       "values": [
@@ -408,14 +322,15 @@
       "id": "Field_16c5zic",
       "key": "Dep",
       "conditional": {
-        "hide": "=Country_value != \"Colombia\" or annon = true"
+        "hide": "=Country != \"Colombia\" or annon = true"
       },
       "validate": {
         "required": true
       },
       "properties": {
         "type": "select"
-      }
+      },
+      "readonly": true
     },
     {
       "values": [
@@ -433,14 +348,15 @@
       "id": "Field_1q671h0",
       "key": "Mun",
       "conditional": {
-        "hide": "=Country_value != \"Colombia\" or annon = true"
+        "hide": "=Country != \"Colombia\" or annon = true"
       },
       "validate": {
         "required": true
       },
       "properties": {
         "type": "select"
-      }
+      },
+      "readonly": true
     },
     {
       "label": "Municipio/Ciudad",
@@ -455,12 +371,34 @@
         "hide": "=Country = \"Colombia\" or annon = true"
       },
       "validate": {
-        "required": true,
+        "required": false,
         "maxLength": 100
       },
       "properties": {
         "type": "text"
-      }
+      },
+      "readonly": true
+    },
+    {
+      "label": "Barrio",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_12ytdqp",
+        "columns": null
+      },
+      "id": "Field_003a131",
+      "key": "Barrio",
+      "validate": {
+        "required": false,
+        "maxLength": 100
+      },
+      "properties": {
+        "type": "text"
+      },
+      "conditional": {
+        "hide": "=Country != \"Colombia\" or annon = true"
+      },
+      "readonly": true
     },
     {
       "label": "Dirección",
@@ -475,28 +413,13 @@
         "type": "text"
       },
       "validate": {
-        "required": true,
+        "required": false,
         "maxLength": 200
       },
       "conditional": {
         "hide": "=annon = true"
       },
-      "description": "Ej. Cra 34 # 23 - 45 Apto 501"
-    },
-    {
-      "label": "Text field",
-      "type": "textfield",
-      "layout": {
-        "row": "Row_12ytdqp",
-        "columns": null
-      },
-      "id": "Field_1wg71hs",
-      "key": "textfield_t9otsm",
-      "properties": {
-        "type": "openModal",
-        "modalComponent": "addressGenerator",
-        "keyAddress": "direccion_residencia"
-      }
+      "readonly": true
     },
     {
       "label": "Teléfono fijo",
@@ -508,7 +431,7 @@
       "id": "Field_04ad0jq",
       "key": "TelF",
       "validate": {
-        "required": true,
+        "required": false,
         "maxLength": 100
       },
       "properties": {
@@ -517,7 +440,7 @@
       "conditional": {
         "hide": "=annon = true"
       },
-      "description": "Si es internacional agregar código de área"
+      "readonly": true
     },
     {
       "label": "Teléfono móvil",
@@ -529,7 +452,7 @@
       "id": "Field_1l2phbr",
       "key": "TelM",
       "validate": {
-        "required": true,
+        "required": false,
         "maxLength": 100
       },
       "properties": {
@@ -538,14 +461,14 @@
       "conditional": {
         "hide": "=annon = true"
       },
-      "description": "Si es internacional agregar código de área"
+      "readonly": true
     },
     {
       "label": "Correo electrónico",
       "type": "textfield",
       "layout": {
         "row": "Row_1tm86g2",
-        "columns": 8
+        "columns": null
       },
       "id": "Field_035u2f4",
       "key": "Email",
@@ -553,18 +476,19 @@
         "type": "email"
       },
       "validate": {
-        "required": true,
+        "required": false,
         "validationType": "email"
       },
       "conditional": {
         "hide": "=annon = true"
-      }
+      },
+      "readonly": true
     },
     {
       "label": "Confirmar correo electrónico",
       "type": "textfield",
       "layout": {
-        "row": "Row_1tm86g2",
+        "row": "Row_0jfcesp",
         "columns": null
       },
       "id": "Field_0gl4mip",
@@ -573,12 +497,13 @@
         "type": "email"
       },
       "validate": {
-        "required": true,
+        "required": false,
         "validationType": "email"
       },
       "conditional": {
         "hide": "=annon = true"
-      }
+      },
+      "readonly": true
     },
     {
       "text": "### Anónimo",
@@ -594,7 +519,8 @@
       },
       "conditional": {
         "hide": "=annon != true"
-      }
+      },
+      "readonly": true
     },
     {
       "label": "Descripción de la solicitud",
@@ -613,30 +539,22 @@
       "properties": {
         "type": "text"
       },
-      "conditional": {
-        "hide": "=Cita = \"Si\""
-      }
+      "readonly": true
     },
     {
-      "label": "Documento adicional",
+      "label": "Anexo de solicitud",
       "type": "textfield",
       "layout": {
-        "row": "Row_00t9qc0",
+        "row": "Row_1ygk3sk",
         "columns": null
       },
-      "id": "Field_1qp2bez",
+      "id": "Field_0ircz47",
       "key": "Anexo",
-      "properties": {
-        "type": "uploadFile",
-        "limitSize": "2 MB",
-        "allowExtensions": "doc, txt, xls, xlsx, docx, ppt, pptx, pdf, mp4, mp3, zip, jpg, jpeg, png, gif, rar"
-      },
-      "validate": {
-        "required": false
-      },
-      "description": "Adjunta en un solo archivo la documentación que consideres necesaria para realizar tu Petición. Tipos de archivos permitidos: doc, txt, xls, xlsx, docx, ppt, pptx, pdf, mp4, mp3, zip, jpg, jpeg, png, gif, rar. Peso máximo permitido 2MB ",
       "conditional": {
-        "hide": "=Cita = \"Si\""
+        "hide": "=Modo_value = \"Cita\""
+      },
+      "properties": {
+        "type": "viewerFile"
       }
     },
     {
@@ -666,181 +584,61 @@
       },
       "id": "Field_0nocccp",
       "key": "Notif",
-      "description": "Selecciona el medio por el que te gustaria recibir la respuesta a tu solicitud ",
+      "description": "Selecciona el medio por el que te gustaria recibir la respuesta a tu solicitud ",
       "conditional": {
-        "hide": "=Cita = \"Si\""
+        "hide": "=Modo = \"Cita\" or annon = true"
       },
       "properties": {
         "type": "select"
       },
-      "defaultValue": "TICK",
-      "validate": {
-        "required": true
-      }
+      "readonly": true
     },
     {
-      "text": "### Aviso de privacidad y autorización para el tratamiento de datos personales\n\nLa entidad sigue los lineamientos de anonimización de datos emitidos por el Archivo General de la Nación y efectivamente da cumplimiento a los mismos. Según anexo 2 de la resolución 2893 de 2020\n\nPuede ver aquí las recomendaciones en torno a las garantías de anonimato (Recomendaciones de anonimato)",
-      "label": "Text view",
-      "type": "text",
-      "layout": {
-        "row": "Row_1k08vmk",
-        "columns": null
-      },
-      "id": "Field_04cwa5t",
-      "properties": {
-        "type": "markdown"
-      }
-    },
-    {
-      "text": "#### Información de la cita",
-      "label": "Text view",
-      "type": "text",
-      "layout": {
-        "row": "Row_0ajis4s",
-        "columns": null
-      },
-      "id": "Field_1aq92ns",
-      "conditional": {
-        "hide": "=Cita != \"Si\""
-      },
-      "properties": {
-        "type": "markdown"
-      }
-    },
-    {
-      "label": "Cuéntanos el motivo de tu cita",
+      "label": "Método de notificación",
       "type": "textfield",
       "layout": {
-        "row": "Row_0w1b21w",
+        "row": "Row_13z8d3w",
         "columns": null
       },
-      "id": "Field_04eeggz",
-      "key": "Motivo",
-      "validate": {
-        "maxLength": 5000
-      },
-      "conditional": {
-        "hide": "=Cita != \"Si\""
-      },
+      "id": "Field_1ufed89",
+      "key": "textfield_4bw5nw",
+      "defaultValue": "Seguimiento por ticket",
+      "readonly": true,
+      "description": "Método preestablecido para anónimos",
       "properties": {
         "type": "text"
+      },
+      "conditional": {
+        "hide": "=annon = false"
       }
     },
     {
       "values": [
         {
-          "label": "Presencial",
-          "value": "Presencial"
+          "label": "Si",
+          "value": "Si"
         },
         {
-          "label": "Virtual",
-          "value": "Virtual"
+          "label": "No",
+          "value": "No"
         }
       ],
-      "label": "Selecciona el tipo de cita que deseas",
+      "label": "Todos los datos son correctos?",
       "type": "select",
       "layout": {
-        "row": "Row_1b3w6ik",
+        "row": "Row_0sqnxdo",
         "columns": null
       },
-      "id": "Field_0ij6xf4",
-      "key": "Tipo_cita",
-      "conditional": {
-        "hide": "=Cita != \"Si\""
-      },
+      "id": "Field_17dzxrf",
+      "key": "Aprob",
       "properties": {
         "type": "select"
-      }
-    },
-    {
-      "subtype": "date",
-      "dateLabel": "Día de la cita",
-      "label": "Date time",
-      "type": "datetime",
-      "layout": {
-        "row": "Row_1y8dfob",
-        "columns": null
       },
-      "id": "Field_0ieibcc",
-      "key": "HIvisita",
-      "properties": {
-        "type": "datepicker"
-      },
-      "validate": {
-        "required": true
-      },
-      "conditional": {
-        "hide": "=Cita != \"Si\""
-      },
-      "description": "Indica el día más adecuado para agendar tu cita"
-    },
-    {
-      "subtype": "time",
-      "dateLabel": "Date",
-      "label": "Date time",
-      "type": "datetime",
-      "layout": {
-        "row": "Row_1y8dfob",
-        "columns": null
-      },
-      "id": "Field_0ieibcc1",
-      "key": "HIvisita2",
-      "timeLabel": "Hora de la cita",
-      "timeSerializingFormat": "utc_offset",
-      "timeInterval": 15,
-      "properties": {
-        "type": "datetimepicker"
-      },
-      "description": "Indica la hora más adecuada para agendar tu cita",
-      "conditional": {
-        "hide": "=Cita != \"Si\""
-      }
-    },
-    {
-      "label": "Consiento que mis datos personales sean transferidos en los términos que señala el presente aviso de privacidad",
-      "type": "checkbox",
-      "layout": {
-        "row": "Row_1ilzm1i",
-        "columns": null
-      },
-      "id": "Field_1lk0mb4",
-      "key": "Consentimiento",
-      "properties": {
-        "type": "checkbox"
-      }
-    },
-    {
-      "text": "Tabs",
-      "label": "Text view",
-      "type": "text",
-      "layout": {
-        "row": "Row_0x9uwca",
-        "columns": null
-      },
-      "id": "Field_11b6ysg",
-      "properties": {
-        "type": "endTabs"
-      }
+      "defaultValue": "Si"
     },
     {
       "action": "submit",
-      "label": "Solicitar Cita",
-      "type": "button",
-      "layout": {
-        "row": "Row_1r1e25n",
-        "columns": null
-      },
-      "id": "Field_197f3nb",
-      "conditional": {
-        "hide": "=Cita != \"Si\" or Consentimiento != true"
-      },
-      "properties": {
-        "type": "submit"
-      }
-    },
-    {
-      "action": "submit",
-      "label": "ENVIAR",
+      "label": "Avanzar",
       "type": "button",
       "layout": {
         "row": "Row_19gs5ej",
@@ -850,20 +648,16 @@
       "key": "field_1ahj40r",
       "properties": {
         "type": "submit"
-      },
-      "conditional": {
-        "hide": "=Cita = \"Si\""
       }
     }
   ],
   "type": "default",
-  "typeForm": "tabs",
-  "id": "PQ_radicar",
+  "id": "PQVerificar",
   "exporter": {
     "name": "Camunda Modeler",
     "version": "5.25.0"
   },
   "executionPlatform": "Camunda Platform",
-  "executionPlatformVersion": "7.19.0",
+  "executionPlatformVersion": "7.20.0",
   "schemaVersion": 16
 }

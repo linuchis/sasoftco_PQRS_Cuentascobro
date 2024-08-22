@@ -1,7 +1,7 @@
 {
   "components": [
     {
-      "text": "# Verificar y asignar consolidador",
+      "text": "### Verificar información del PQRS",
       "label": "Text view",
       "type": "text",
       "layout": {
@@ -11,6 +11,19 @@
       "id": "Field_0bh4vxt",
       "properties": {
         "type": "markdonw"
+      }
+    },
+    {
+      "text": "Tabs",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0pm3e9x",
+        "columns": null
+      },
+      "id": "Field_1tk0wjx",
+      "properties": {
+        "type": "startTabs"
       }
     },
     {
@@ -404,7 +417,7 @@
       "label": "Dirección",
       "type": "textfield",
       "layout": {
-        "row": "Row_12ytdqp",
+        "row": "Row_10tb0j7",
         "columns": null
       },
       "id": "Field_1qcilyc",
@@ -637,6 +650,32 @@
       "defaultValue": "Si"
     },
     {
+      "text": "Información de la PQRS por parte del usuario",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ejtgk7",
+        "columns": null
+      },
+      "id": "Field_03d2uod",
+      "properties": {
+        "type": "tab"
+      }
+    },
+    {
+      "text": "Tabs",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_15f9dcs",
+        "columns": null
+      },
+      "id": "Field_1j2cwng",
+      "properties": {
+        "type": "endTabs"
+      }
+    },
+    {
       "action": "submit",
       "label": "Avanzar",
       "type": "button",
@@ -655,7 +694,7 @@
   "id": "PQVerificar",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.22.0"
+    "version": "5.25.0"
   },
   "executionPlatform": "Camunda Platform",
   "executionPlatformVersion": "7.20.0",

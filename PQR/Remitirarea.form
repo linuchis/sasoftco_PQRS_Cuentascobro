@@ -64,16 +64,12 @@
     {
       "values": [
         {
-          "label": "A 1",
-          "value": "Area1"
+          "label": "Ingeniería",
+          "value": "Ingenieria"
         },
         {
-          "label": "A 2",
-          "value": "Area2"
-        },
-        {
-          "label": "A 3",
-          "value": "Area3"
+          "label": "Administrativa",
+          "value": "Administrativa"
         }
       ],
       "label": "Seleccione el área correspondiente",
@@ -113,7 +109,7 @@
   "id": "PQRemitir",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.22.0"
+    "version": "5.25.0"
   },
   "executionPlatform": "Camunda Platform",
   "executionPlatformVersion": "7.20.0",
