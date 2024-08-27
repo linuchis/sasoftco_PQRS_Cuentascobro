@@ -37,23 +37,10 @@
       }
     },
     {
-      "text": "La persona",
-      "label": "Text view",
-      "type": "text",
-      "layout": {
-        "row": "Row_1ovtruq",
-        "columns": null
-      },
-      "id": "Field_06ttzz2",
-      "properties": {
-        "type": "markdown"
-      }
-    },
-    {
       "label": "Nombres",
       "type": "textfield",
       "layout": {
-        "row": "Row_1ovtruq",
+        "row": "Row_0f0y1e7",
         "columns": null
       },
       "id": "Field_011yr90",
@@ -65,6 +52,19 @@
         "type": "text"
       },
       "readonly": true
+    },
+    {
+      "text": "La persona",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ovtruq",
+        "columns": null
+      },
+      "id": "Field_06ttzz2",
+      "properties": {
+        "type": "markdown"
+      }
     },
     {
       "label": "Apellidos",
