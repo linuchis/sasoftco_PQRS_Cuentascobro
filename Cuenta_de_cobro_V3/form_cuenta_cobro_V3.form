@@ -236,25 +236,9 @@
       "key": "nivel_academico",
       "properties": {
         "type": "select"
-      }
-    },
-    {
-      "label": "Número de tarjeta profesional",
-      "type": "number",
-      "layout": {
-        "row": "Row_1arxu66",
-        "columns": null
       },
-      "id": "Field_0jxc0sx",
-      "key": "numero_tarjeta",
       "validate": {
-        "required": false
-      },
-      "properties": {
-        "type": "digit"
-      },
-      "conditional": {
-        "hide": "=nivel_academico = \"nocuenta\" or  \"primaria\" or \"secundaria\" or \"bachiller\""
+        "required": true
       }
     },
     {
@@ -277,8 +261,12 @@
           "value": "ingenieria"
         },
         {
-          "label": "Área Administrativa ó comercial",
+          "label": "Área Administrativa",
           "value": "administrativa"
+        },
+        {
+          "label": "Área Comercial",
+          "value": "comercial"
         }
       ],
       "label": "Dirección o dependencia donde trabaja. ",
@@ -288,7 +276,13 @@
         "columns": null
       },
       "id": "Field_1c8gero",
-      "key": "dependencia"
+      "key": "dependencia",
+      "properties": {
+        "type": "select"
+      },
+      "validate": {
+        "required": true
+      }
     },
     {
       "subtype": "date",
@@ -408,7 +402,10 @@
         "columns": null
       },
       "id": "Field_1lc94yq",
-      "key": "contrato_tipo"
+      "key": "contrato_tipo",
+      "properties": {
+        "type": "select"
+      }
     },
     {
       "text": "Anexos de documentación",
@@ -520,7 +517,7 @@
         "allowExtensions": "pdf"
       },
       "conditional": {
-        "hide": "=contrato_tipo = \"CPS\""
+        "hide": "=contrato_tipo = \"Contrato por Prestación de Servicios\""
       }
     },
     {
@@ -542,7 +539,7 @@
         "allowExtensions": "pdf"
       },
       "conditional": {
-        "hide": "=contrato_tipo = \"contrato_aprendizaje\""
+        "hide": "=contrato_tipo = \"Contrato de aprendizaje o pasante\""
       }
     },
     {
@@ -578,7 +575,7 @@
   "id": "form_cuenta_cobro",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.25.0"
+    "version": "5.26.0"
   },
   "executionPlatform": "Camunda Platform",
   "executionPlatformVersion": "7.20.0",

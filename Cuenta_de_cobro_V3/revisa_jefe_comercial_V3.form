@@ -1,7 +1,7 @@
 {
   "components": [
     {
-      "text": "### Revisión auxiliar administrativo: Cuentas de colaboradores en proyectos SASOFTCO",
+      "text": "### Revisión Jefe Comercial: Cuentas de colaboradores en proyectos SASOFTCO",
       "label": "Text view",
       "type": "text",
       "layout": {
@@ -231,18 +231,29 @@
       }
     },
     {
+      "values": [
+        {
+          "label": "Área de Ingeniería",
+          "value": "ingenieria"
+        },
+        {
+          "label": "Área Comercial",
+          "value": "comercial"
+        },
+        {
+          "label": "Área Administrativa",
+          "value": "administrativa"
+        }
+      ],
       "label": "Dirección o dependencia donde trabaja. ",
-      "type": "textfield",
+      "type": "select",
       "layout": {
         "row": "Row_0lgys0t",
         "columns": null
       },
-      "id": "Field_0ffjlld",
+      "id": "Field_1c8gero",
       "key": "dependencia",
-      "readonly": true,
-      "properties": {
-        "type": "text"
-      }
+      "readonly": true
     },
     {
       "subtype": "date",
@@ -506,14 +517,14 @@
           "value": "No"
         }
       ],
-      "label": "¿Aprueba la documentación por parte de auxiliar administrativo?",
+      "label": "¿Aprueba la documentación por parte de jefe comercial?",
       "type": "radio",
       "layout": {
         "row": "Row_186pa25",
         "columns": null
       },
       "id": "Field_0wgiawl",
-      "key": "aprueba_aux_adm",
+      "key": "aprueba_jefe_comercial",
       "properties": {
         "type": "select"
       }
@@ -526,9 +537,9 @@
         "columns": null
       },
       "id": "Field_168lfxh",
-      "key": "comentarios_aux_adm",
+      "key": "comentarios_jefe_comercial",
       "conditional": {
-        "hide": "=aprueba_aux_adm != \"No\""
+        "hide": "=aprueba_jefe_comercial != \"No\""
       },
       "properties": {
         "type": "text"
@@ -564,7 +575,7 @@
   ],
   "type": "default",
   "typeForm": "tabs",
-  "id": "aprueba_aux_adm",
+  "id": "aprueba_jefe_comercial",
   "exporter": {
     "name": "Camunda Modeler",
     "version": "5.26.0"

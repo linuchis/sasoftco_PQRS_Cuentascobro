@@ -1,7 +1,7 @@
 {
   "components": [
     {
-      "text": "### Revisión jefe técnico: Cuentas de colaboradores en proyectos SASOFTCO",
+      "text": "### Revisión jefe de ingeniería: Cuentas de colaboradores en proyectos SASOFTCO",
       "label": "Text view",
       "type": "text",
       "layout": {
@@ -172,47 +172,48 @@
     {
       "values": [
         {
-          "label": "Sí",
-          "value": "Sí"
+          "label": "No cuenta",
+          "value": "nocuenta"
         },
         {
-          "label": "No",
-          "value": "No"
+          "label": "Primaria",
+          "value": "primaria"
+        },
+        {
+          "label": "Básica secundaria",
+          "value": "secundaria"
+        },
+        {
+          "label": "Bachiller Académico",
+          "value": "bachiller"
+        },
+        {
+          "label": "Pregrado",
+          "value": "pregrado"
+        },
+        {
+          "label": "Maestría",
+          "value": "maestria"
+        },
+        {
+          "label": "Doctorado",
+          "value": "doctorado"
+        },
+        {
+          "label": "Técnico profesional",
+          "value": "tecnico"
         }
       ],
-      "label": "¿Cuenta con título universitario?",
+      "label": "Nivel académico",
       "type": "select",
       "layout": {
-        "row": "Row_1mkhg5r",
+        "row": "Row_1rrolq4",
         "columns": null
       },
-      "id": "Field_0mhe9wy",
-      "key": "titulo_universitario",
-      "validate": {
-        "required": true
-      },
+      "id": "Field_0dwvkeu",
+      "key": "nivel_academico",
       "properties": {
         "type": "select"
-      },
-      "readonly": true
-    },
-    {
-      "label": "Número de tarjeta profesional",
-      "type": "number",
-      "layout": {
-        "row": "Row_1mkhg5r",
-        "columns": null
-      },
-      "id": "Field_0jxc0sx",
-      "key": "numero_tarjeta",
-      "validate": {
-        "required": false
-      },
-      "properties": {
-        "type": "digit"
-      },
-      "conditional": {
-        "hide": "=titulo_universitario != \"Sí\""
       },
       "readonly": true
     },
@@ -228,6 +229,31 @@
       "properties": {
         "type": "tab"
       }
+    },
+    {
+      "values": [
+        {
+          "label": "Área de Ingeniería",
+          "value": "ingenieria"
+        },
+        {
+          "label": "Área Comercial",
+          "value": "comercial"
+        },
+        {
+          "label": "Área Administrativa",
+          "value": "administrativa"
+        }
+      ],
+      "label": "Dirección o dependencia donde trabaja. ",
+      "type": "select",
+      "layout": {
+        "row": "Row_0lgys0t",
+        "columns": null
+      },
+      "id": "Field_1c8gero",
+      "key": "dependencia",
+      "readonly": true
     },
     {
       "subtype": "date",
@@ -287,23 +313,6 @@
       "readonly": true
     },
     {
-      "label": "Lugar en el que realizó sus funciones la mayor parte del tiempo. Proporcione una dirección de ser posible y la descripción del lugar.",
-      "type": "textarea",
-      "layout": {
-        "row": "Row_1r1nkn8",
-        "columns": null
-      },
-      "id": "Field_0yquh2d",
-      "key": "lugar",
-      "validate": {
-        "required": true
-      },
-      "properties": {
-        "type": "textarea"
-      },
-      "readonly": true
-    },
-    {
       "label": "Detalle sus servicios realizados durante el período indicado; describa las funciones realizadas durante el proyecto de una forma breve y concisa, por favor.",
       "type": "textarea",
       "layout": {
@@ -352,6 +361,30 @@
       "readonly": true
     },
     {
+      "values": [
+        {
+          "label": "Contrato por Prestación de Servicios",
+          "value": "CPS"
+        },
+        {
+          "label": "Contrato de aprendizaje o pasante",
+          "value": "contrato_aprendizaje"
+        }
+      ],
+      "label": "Contrato de tipo:",
+      "type": "select",
+      "layout": {
+        "row": "Row_1a0k3lw",
+        "columns": null
+      },
+      "id": "Field_1lc94yq",
+      "key": "contrato_tipo",
+      "readonly": true,
+      "properties": {
+        "type": "select"
+      }
+    },
+    {
       "text": "Anexos de documentación",
       "label": "Text view",
       "type": "text",
@@ -363,6 +396,22 @@
       "properties": {
         "type": "tab"
       }
+    },
+    {
+      "label": "¿Es la primera vez que registra una cuenta de cobro o desea actualiza una cuenta bancaria o de RUT?",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1jqbeau",
+        "columns": 16
+      },
+      "id": "Field_0in0f1p",
+      "key": "pregunta",
+      "description": "De lo contrario, puede continuar sin marcar la casilla.",
+      "defaultValue": false,
+      "properties": {
+        "type": "checkbox"
+      },
+      "readonly": true
     },
     {
       "label": "Cuenta de cobro dirigida a SASOFTCO",
@@ -419,7 +468,7 @@
       "readonly": true
     },
     {
-      "label": "Seguridad socal asociada",
+      "label": "Seguridad social asociada",
       "type": "textfield",
       "layout": {
         "row": "Row_1omrn2r",
@@ -437,20 +486,23 @@
       "readonly": true
     },
     {
-      "label": "ARL Asociada",
+      "label": "Certificado del pago de planilla.",
       "type": "textfield",
       "layout": {
         "row": "Row_00e5gx4",
         "columns": null
       },
       "id": "Field_17xcojv",
-      "key": "ARL",
+      "key": "Certificadop",
       "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
       "validate": {
         "required": false
       },
       "properties": {
         "type": "viewerFile"
+      },
+      "conditional": {
+        "hide": "=contrato_tipo = \"contrato_aprendizaje\""
       },
       "readonly": true
     },
@@ -529,7 +581,7 @@
   "id": "aprobar_revisor_tecnico",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.25.0"
+    "version": "5.26.0"
   },
   "executionPlatform": "Camunda Platform",
   "executionPlatformVersion": "7.19.0",

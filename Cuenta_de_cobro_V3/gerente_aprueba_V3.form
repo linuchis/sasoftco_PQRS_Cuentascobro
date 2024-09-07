@@ -211,26 +211,8 @@
       "key": "nivel_academico",
       "properties": {
         "type": "select"
-      }
-    },
-    {
-      "label": "Número de tarjeta profesional",
-      "type": "number",
-      "layout": {
-        "row": "Row_1arxu66",
-        "columns": null
       },
-      "id": "Field_0jxc0sx",
-      "key": "numero_tarjeta",
-      "validate": {
-        "required": false
-      },
-      "properties": {
-        "type": "digit"
-      },
-      "conditional": {
-        "hide": "=nivel_academico = \"nocuenta\" or  \"primaria\" or \"secundaria\" or \"bachiller\""
-      }
+      "readonly": true
     },
     {
       "text": "Información servicios prestados",
@@ -267,7 +249,8 @@
         "columns": null
       },
       "id": "Field_1c8gero",
-      "key": "dependencia"
+      "key": "dependencia",
+      "readonly": true
     },
     {
       "subtype": "date",
@@ -393,7 +376,10 @@
       },
       "id": "Field_1lc94yq",
       "key": "contrato_tipo",
-      "readonly": true
+      "readonly": true,
+      "properties": {
+        "type": "select"
+      }
     },
     {
       "text": "Anexos de documentación",
@@ -421,7 +407,8 @@
       "defaultValue": false,
       "properties": {
         "type": "checkbox"
-      }
+      },
+      "readonly": true
     },
     {
       "label": "Cuenta de cobro dirigida a SASOFTCO",
@@ -572,7 +559,7 @@
   "id": "aprobar_gerente",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.25.0"
+    "version": "5.26.0"
   },
   "executionPlatform": "Camunda Platform",
   "executionPlatformVersion": "7.19.0",
