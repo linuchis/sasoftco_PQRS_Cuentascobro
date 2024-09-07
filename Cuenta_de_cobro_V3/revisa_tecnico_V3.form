@@ -1,0 +1,537 @@
+{
+  "components": [
+    {
+      "text": "### Revisión jefe técnico: Cuentas de colaboradores en proyectos SASOFTCO",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1f7xugj",
+        "columns": null
+      },
+      "id": "Field_0q9r0bg",
+      "properties": {
+        "type": "markdown"
+      }
+    },
+    {
+      "text": "Tabs",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0awp87z",
+        "columns": null
+      },
+      "id": "Field_0g4gxy6",
+      "properties": {
+        "type": "startTabs"
+      }
+    },
+    {
+      "text": "Información general",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_114lt5c",
+        "columns": null
+      },
+      "id": "Field_0wfkr31",
+      "properties": {
+        "type": "tab"
+      }
+    },
+    {
+      "label": "Nombres",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ovtruq",
+        "columns": null
+      },
+      "id": "Field_011yr90",
+      "key": "nombres",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "text"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Apellidos",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ovtruq",
+        "columns": null
+      },
+      "id": "Field_1qzoszt",
+      "key": "apellidos",
+      "validate": {
+        "required": false
+      },
+      "properties": {
+        "type": "text"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Celular",
+      "type": "number",
+      "layout": {
+        "row": "Row_1h7v03a",
+        "columns": null
+      },
+      "id": "Field_19xonlr",
+      "key": "Ntelefono",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "digit"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Correo electrónico",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1h7v03a",
+        "columns": null
+      },
+      "id": "Field_0x81r21",
+      "key": "Correo",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "email"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Dirección de residencia",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0kktxhv",
+        "columns": null
+      },
+      "id": "Field_0jl84ka",
+      "key": "direccion_residencia",
+      "validate": {
+        "required": false
+      },
+      "properties": {
+        "type": "text"
+      },
+      "disabled": false,
+      "readonly": true
+    },
+    {
+      "values": [
+        {
+          "label": "Cédula de ciudadanía",
+          "value": "Cédula de ciudadanía"
+        },
+        {
+          "label": "Cédula de extranjería",
+          "value": "Cédula de extranjería"
+        }
+      ],
+      "label": "Tipo de documento",
+      "type": "select",
+      "layout": {
+        "row": "Row_04ttzid",
+        "columns": null
+      },
+      "id": "Field_02vq31s",
+      "key": "tipo_documento",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "select"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Número de documento",
+      "type": "number",
+      "layout": {
+        "row": "Row_04ttzid",
+        "columns": null
+      },
+      "id": "Field_0c2yjik",
+      "key": "numero_documento",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "digit"
+      },
+      "readonly": true
+    },
+    {
+      "values": [
+        {
+          "label": "Sí",
+          "value": "Sí"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "¿Cuenta con título universitario?",
+      "type": "select",
+      "layout": {
+        "row": "Row_1mkhg5r",
+        "columns": null
+      },
+      "id": "Field_0mhe9wy",
+      "key": "titulo_universitario",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "select"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Número de tarjeta profesional",
+      "type": "number",
+      "layout": {
+        "row": "Row_1mkhg5r",
+        "columns": null
+      },
+      "id": "Field_0jxc0sx",
+      "key": "numero_tarjeta",
+      "validate": {
+        "required": false
+      },
+      "properties": {
+        "type": "digit"
+      },
+      "conditional": {
+        "hide": "=titulo_universitario != \"Sí\""
+      },
+      "readonly": true
+    },
+    {
+      "text": "Información servicios prestados",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1wy42k6",
+        "columns": null
+      },
+      "id": "Field_10mhiwx",
+      "properties": {
+        "type": "tab"
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Fecha de finalización de servicios",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0zr933l",
+        "columns": null
+      },
+      "id": "Field_1wupjx5",
+      "key": "fecha_fin",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "datepicker"
+      },
+      "readonly": true
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Fecha de inicio de servicio",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0zr933l",
+        "columns": null
+      },
+      "id": "Field_0kmy9m5",
+      "key": "fecha_inicio",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "datepicker"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Valor a cobrar",
+      "type": "number",
+      "layout": {
+        "row": "Row_0zr933l",
+        "columns": null
+      },
+      "id": "Field_0rtthtz",
+      "key": "valor_cobrar",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "currency",
+        "thousandSeparator": ",",
+        "decimalDigits": "2"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Lugar en el que realizó sus funciones la mayor parte del tiempo. Proporcione una dirección de ser posible y la descripción del lugar.",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1r1nkn8",
+        "columns": null
+      },
+      "id": "Field_0yquh2d",
+      "key": "lugar",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "textarea"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Detalle sus servicios realizados durante el período indicado; describa las funciones realizadas durante el proyecto de una forma breve y concisa, por favor.",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0bo2aui",
+        "columns": null
+      },
+      "id": "Field_0kgg5w0",
+      "key": "servicios_realizados",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "textarea"
+      },
+      "readonly": true
+    },
+    {
+      "values": [
+        {
+          "label": "Presencial",
+          "value": "Presencial"
+        },
+        {
+          "label": "Remoto",
+          "value": "Remoto"
+        },
+        {
+          "label": "Híbrida",
+          "value": "Hibrida"
+        }
+      ],
+      "label": "Modalidad de trabajo",
+      "type": "select",
+      "layout": {
+        "row": "Row_0im5c5t",
+        "columns": null
+      },
+      "id": "Field_18xnhz4",
+      "key": "modalidad_trabajo",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "select"
+      },
+      "readonly": true
+    },
+    {
+      "text": "Anexos de documentación",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_050d465",
+        "columns": null
+      },
+      "id": "Field_1832utz",
+      "properties": {
+        "type": "tab"
+      }
+    },
+    {
+      "label": "Cuenta de cobro dirigida a SASOFTCO",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_09c72x2",
+        "columns": null
+      },
+      "id": "Field_0czgpal",
+      "key": "cuenta_cobro",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "viewerFile"
+      },
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB. En caso de ser más de una cuenta de cobro anexe un archivo .zip",
+      "readonly": true
+    },
+    {
+      "label": "Certificado bancario",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1k7nhf6",
+        "columns": null
+      },
+      "id": "Field_0h81jtf",
+      "key": "certificado_banco",
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+      "validate": {
+        "required": false
+      },
+      "properties": {
+        "type": "viewerFile"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Copia RUT",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0smfx8g",
+        "columns": null
+      },
+      "id": "Field_1xiyv4a",
+      "key": "RUT",
+      "validate": {
+        "required": false
+      },
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+      "properties": {
+        "type": "viewerFile"
+      },
+      "readonly": true
+    },
+    {
+      "label": "Seguridad socal asociada",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1omrn2r",
+        "columns": null
+      },
+      "id": "Field_1l9bp7j",
+      "key": "seg_social",
+      "validate": {
+        "required": false
+      },
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+      "properties": {
+        "type": "viewerFile"
+      },
+      "readonly": true
+    },
+    {
+      "label": "ARL Asociada",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_00e5gx4",
+        "columns": null
+      },
+      "id": "Field_17xcojv",
+      "key": "ARL",
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+      "validate": {
+        "required": false
+      },
+      "properties": {
+        "type": "viewerFile"
+      },
+      "readonly": true
+    },
+    {
+      "values": [
+        {
+          "label": "Si",
+          "value": "Si"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "¿Aprueba la revisión técnica?",
+      "type": "radio",
+      "layout": {
+        "row": "Row_186pa25",
+        "columns": null
+      },
+      "id": "Field_0wgiawl",
+      "key": "aprueba_revision_tec",
+      "properties": {
+        "type": "select"
+      }
+    },
+    {
+      "label": "Comentarios para sugerir cambios a los colaboradores.",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1g8rg1u",
+        "columns": null
+      },
+      "id": "Field_11lzako",
+      "key": "comentarios_tec",
+      "validate": {
+        "required": true
+      },
+      "conditional": {
+        "hide": "=aprueba_revision_tec != \"No\""
+      },
+      "properties": {
+        "type": "text"
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Terminar revisión",
+      "type": "button",
+      "layout": {
+        "row": "Row_1qgs8je",
+        "columns": null
+      },
+      "id": "Field_0zmhspw",
+      "key": "field_0ede1b4",
+      "properties": {
+        "type": "submit"
+      }
+    },
+    {
+      "text": "Tabs",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_02eis9s",
+        "columns": null
+      },
+      "id": "Field_14217jd",
+      "properties": {
+        "type": "endTabs"
+      }
+    }
+  ],
+  "type": "default",
+  "typeForm": "tabs",
+  "id": "aprobar_revisor_tecnico",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.25.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 16
+}
