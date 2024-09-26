@@ -26,9 +26,13 @@
         <bpmn:flowNodeRef>Event_0x6bity</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>mensaje_fallo</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_14e7un0</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_1v615b1</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_1fls59e</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_1br0c4s</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0nxz9b4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0ub5rz9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0gwkyco</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0cffn63</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0z1g4io</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0xd8alp</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_13py4i5</bpmn:flowNodeRef>
         <bpmn:childLaneSet id="LaneSet_1178lu1">
           <bpmn:lane id="Lane_115r8ih">
             <bpmn:flowNodeRef>Activity_06rolqv</bpmn:flowNodeRef>
@@ -39,9 +43,13 @@
             <bpmn:flowNodeRef>Event_0x6bity</bpmn:flowNodeRef>
             <bpmn:flowNodeRef>mensaje_fallo</bpmn:flowNodeRef>
             <bpmn:flowNodeRef>Activity_14e7un0</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Activity_1v615b1</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Activity_1fls59e</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Activity_1br0c4s</bpmn:flowNodeRef>
+            <bpmn:flowNodeRef>Activity_0nxz9b4</bpmn:flowNodeRef>
+            <bpmn:flowNodeRef>Activity_0ub5rz9</bpmn:flowNodeRef>
+            <bpmn:flowNodeRef>Activity_0gwkyco</bpmn:flowNodeRef>
+            <bpmn:flowNodeRef>Activity_0cffn63</bpmn:flowNodeRef>
+            <bpmn:flowNodeRef>Activity_0z1g4io</bpmn:flowNodeRef>
+            <bpmn:flowNodeRef>Activity_0xd8alp</bpmn:flowNodeRef>
+            <bpmn:flowNodeRef>Activity_13py4i5</bpmn:flowNodeRef>
           </bpmn:lane>
         </bpmn:childLaneSet>
       </bpmn:lane>
@@ -125,7 +133,7 @@
 Esperamos que se encuentre bien. Le informamos que su cuenta de cobro ha sido radicada.
 &lt;br&gt;&lt;br&gt;
 &lt;br&gt;&lt;br&gt;
-Si tiene alguna pregunta o necesita asistencia para realizar las correcciones, no dude en ponerse en contacto con nosotros a través de --- o 3105736581.
+Si tiene alguna pregunta o necesita asistencia para realizar las correcciones, no dude en ponerse en contacto con nosotros a través de facturacion@sasoftco.com o 3105736581.
 &lt;br&gt;&lt;br&gt;
 Atentamente,
 &lt;br&gt;
@@ -142,9 +150,9 @@ Equipo SASOFTCO.</camunda:inputParameter>
     <bpmn:exclusiveGateway id="Gateway_1nnl5r1">
       <bpmn:incoming>Flow_02c9fjd</bpmn:incoming>
       <bpmn:incoming>Flow_02vbind</bpmn:incoming>
-      <bpmn:incoming>Flow_03a17wk</bpmn:incoming>
-      <bpmn:incoming>Flow_0zp04a1</bpmn:incoming>
-      <bpmn:incoming>Flow_0ji6o3u</bpmn:incoming>
+      <bpmn:incoming>Flow_09tpka8</bpmn:incoming>
+      <bpmn:incoming>Flow_1oteyff</bpmn:incoming>
+      <bpmn:incoming>Flow_0t35awg</bpmn:incoming>
       <bpmn:outgoing>Flow_0evcifz</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:userTask id="Activity_0ch0bf6" name="Revisa documentación" camunda:formRef="aprobar_aux_adm" camunda:formRefBinding="latest" camunda:assignee="ligia" camunda:candidateGroups="actor_auxiliar_administrativo">
@@ -159,15 +167,10 @@ Equipo SASOFTCO.</camunda:inputParameter>
       <bpmn:incoming>Flow_1fnj2zh</bpmn:incoming>
       <bpmn:outgoing>Flow_0erocjk</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:exclusiveGateway id="Gateway_1e89lyk">
-      <bpmn:incoming>Flow_0f572o8</bpmn:incoming>
-      <bpmn:outgoing>Flow_0s75x2u</bpmn:outgoing>
-      <bpmn:outgoing>Flow_0mw8jyn</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
     <bpmn:exclusiveGateway id="Gateway_0qehwzx">
       <bpmn:incoming>Flow_0erocjk</bpmn:incoming>
       <bpmn:outgoing>Flow_12n62on</bpmn:outgoing>
-      <bpmn:outgoing>Flow_0ut4ium</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0oelso7</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:endEvent id="Event_1nfkfoa" name="Pago al operario">
       <bpmn:incoming>Flow_10abomh</bpmn:incoming>
@@ -259,44 +262,23 @@ Equipo SASOFTCO.</camunda:inputParameter>
       <bpmn:incoming>Flow_0r3t9k4</bpmn:incoming>
       <bpmn:outgoing>Flow_0uxca10</bpmn:outgoing>
     </bpmn:sendTask>
-    <bpmn:userTask id="Activity_14e7un0" name="Corregir cuenta de cobro">
-      <bpmn:incoming>Flow_0dxsopw</bpmn:incoming>
-      <bpmn:outgoing>Flow_02c9fjd</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:userTask id="Activity_1v615b1" name="Corregir cuenta de cobro">
-      <bpmn:incoming>Flow_1xa8l9m</bpmn:incoming>
-      <bpmn:outgoing>Flow_0ji6o3u</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:userTask id="Activity_1fls59e" name="Corregir cuenta de cobro">
-      <bpmn:incoming>Flow_0s75x2u</bpmn:incoming>
-      <bpmn:outgoing>Flow_03a17wk</bpmn:outgoing>
-    </bpmn:userTask>
     <bpmn:exclusiveGateway id="Gateway_1r8kpld">
       <bpmn:incoming>Flow_0pwo56p</bpmn:incoming>
-      <bpmn:outgoing>Flow_1xa8l9m</bpmn:outgoing>
       <bpmn:outgoing>Flow_1fqv5rq</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1gm64zk</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="Flow_03493jb" sourceRef="StartEvent_1" targetRef="Activity_06rolqv" />
     <bpmn:sequenceFlow id="Flow_02vbind" sourceRef="Activity_06rolqv" targetRef="Gateway_1nnl5r1" />
     <bpmn:sequenceFlow id="Flow_02c9fjd" sourceRef="Activity_14e7un0" targetRef="Gateway_1nnl5r1" />
-    <bpmn:sequenceFlow id="Flow_03a17wk" sourceRef="Activity_1fls59e" targetRef="Gateway_1nnl5r1" />
-    <bpmn:sequenceFlow id="Flow_0zp04a1" sourceRef="Activity_1br0c4s" targetRef="Gateway_1nnl5r1" />
-    <bpmn:sequenceFlow id="Flow_0ji6o3u" sourceRef="Activity_1v615b1" targetRef="Gateway_1nnl5r1" />
     <bpmn:sequenceFlow id="Flow_0evcifz" sourceRef="Gateway_1nnl5r1" targetRef="Activity_0ch0bf6" />
     <bpmn:sequenceFlow id="Flow_1vbt7de" sourceRef="Activity_0ch0bf6" targetRef="Gateway_0e36qhc" />
     <bpmn:sequenceFlow id="Flow_0f572o8" sourceRef="Activity_11r96do" targetRef="Gateway_1e89lyk" />
     <bpmn:sequenceFlow id="Flow_0erocjk" sourceRef="Activity_0hvisak" targetRef="Gateway_0qehwzx" />
-    <bpmn:sequenceFlow id="Flow_0s75x2u" sourceRef="Gateway_1e89lyk" targetRef="Activity_1fls59e">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${aprueba_revision_tec=="No"}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0mw8jyn" sourceRef="Gateway_1e89lyk" targetRef="Activity_1ajlzed">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${aprueba_revision_tec=="Si"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_12n62on" sourceRef="Gateway_0qehwzx" targetRef="Activity_1ajlzed">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${aprueba_revision_adm=="Si"}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0ut4ium" sourceRef="Gateway_0qehwzx" targetRef="Activity_1br0c4s">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${aprueba_revision_adm=="No"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_10abomh" sourceRef="mensaje_exito" targetRef="Event_1nfkfoa" />
     <bpmn:sequenceFlow id="Flow_1qhy7ts" name="Si" sourceRef="Gateway_0m8mvnv" targetRef="mensaje_exito">
@@ -312,13 +294,6 @@ Equipo SASOFTCO.</camunda:inputParameter>
     <bpmn:sequenceFlow id="Flow_1fqv5rq" sourceRef="Gateway_1r8kpld" targetRef="Activity_1ajlzed">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${aprueba_jefe_comercial=="Si"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_1xa8l9m" sourceRef="Gateway_1r8kpld" targetRef="Activity_1v615b1">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${aprueba_jefe_comercial=="No"}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:userTask id="Activity_1br0c4s" name="Corregir cuenta de cobro">
-      <bpmn:incoming>Flow_0ut4ium</bpmn:incoming>
-      <bpmn:outgoing>Flow_0zp04a1</bpmn:outgoing>
-    </bpmn:userTask>
     <bpmn:userTask id="Activity_1ajlzed" name="Aprueba gerente" camunda:formRef="aprobar_gerente" camunda:formRefBinding="latest" camunda:assignee="carlos" camunda:candidateGroups="actor_gerente">
       <bpmn:incoming>Flow_12n62on</bpmn:incoming>
       <bpmn:incoming>Flow_0mw8jyn</bpmn:incoming>
@@ -339,7 +314,7 @@ Equipo SASOFTCO.</camunda:inputParameter>
     <bpmn:sequenceFlow id="Flow_1fnj2zh" sourceRef="Gateway_1qgcb2u" targetRef="Activity_0hvisak">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${dependencia_value=="administrativa"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0dxsopw" sourceRef="Gateway_0e36qhc" targetRef="Activity_14e7un0">
+    <bpmn:sequenceFlow id="Flow_0dxsopw" sourceRef="Gateway_0e36qhc" targetRef="Activity_0nxz9b4">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${aprueba_aux_adm=="No"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:exclusiveGateway id="Gateway_0e36qhc">
@@ -361,6 +336,195 @@ Equipo SASOFTCO.</camunda:inputParameter>
       <bpmn:incoming>Flow_0yhzt2z</bpmn:incoming>
       <bpmn:outgoing>Flow_0pwo56p</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0e6pghb" sourceRef="Gateway_1e89lyk" targetRef="Activity_0ub5rz9">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${aprueba_revision_tec=="No"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0oelso7" sourceRef="Gateway_0qehwzx" targetRef="Activity_0cffn63">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${aprueba_revision_adm=="No"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1gm64zk" sourceRef="Gateway_1r8kpld" targetRef="Activity_0gwkyco">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${aprueba_jefe_comercial=="No"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="Activity_14e7un0" name="Corregir cuenta de cobro" camunda:formRef="Corregir_CDC_Aux" camunda:formRefBinding="latest">
+      <bpmn:incoming>Flow_12kj6qf</bpmn:incoming>
+      <bpmn:outgoing>Flow_02c9fjd</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sendTask id="Activity_0nxz9b4" name="Corrección de cuenta de cobro por  documentación">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:inputParameter name="url">${UrlLocalBackendCore}/api/ServiceTask/inform-email</camunda:inputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="secret_key">hola</camunda:inputParameter>
+          <camunda:inputParameter name="bodyEmail">Estimado ${nombres},
+&lt;br&gt;&lt;br&gt;
+Esperamos que se encuentre bien. Le informamos que su cuenta de cobro necesita ser corregida respectivamente en la documentación.
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+Si tiene alguna pregunta o necesita asistencia para realizar las correcciones, no dude en ponerse en contacto con nosotros a través de facturacion@sasoftco.com o 3105736581.
+&lt;br&gt;&lt;br&gt;
+Atentamente,
+&lt;br&gt;
+Equipo SASOFTCO.</camunda:inputParameter>
+          <camunda:inputParameter name="subject">Radicación de Cuenta de Cobro - Corrección Requerida</camunda:inputParameter>
+          <camunda:inputParameter name="payload">{
+'to' :   '${Correo}',
+'subject':  '${subject}',
+'bodyEmail':  '${bodyEmail}',
+'secret_key':  '${secret_key}'
+}</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0dxsopw</bpmn:incoming>
+      <bpmn:outgoing>Flow_12kj6qf</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:sequenceFlow id="Flow_12kj6qf" sourceRef="Activity_0nxz9b4" targetRef="Activity_14e7un0" />
+    <bpmn:sendTask id="Activity_0ub5rz9" name="Corrección de cuenta de cobro ">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:inputParameter name="url">${UrlLocalBackendCore}/api/ServiceTask/inform-email</camunda:inputParameter>
+            <camunda:inputParameter name="payload">{
+'to' :   '${Correo}',
+'subject':  '${subject}',
+'bodyEmail':  '${bodyEmail}',
+'secret_key':  '${secret_key}'
+}</camunda:inputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="secret_key">hola</camunda:inputParameter>
+          <camunda:inputParameter name="bodyEmail">Estimado ${nombres},
+&lt;br&gt;&lt;br&gt;
+Esperamos que se encuentre bien. Le informamos que su cuenta de cobro necesita ser corregida respectivamente en los datos proporcionados.
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+Si tiene alguna pregunta o necesita asistencia para realizar las correcciones, no dude en ponerse en contacto con nosotros a través de facturacion@sasoftco.com o 3105736581.
+&lt;br&gt;&lt;br&gt;
+Atentamente,
+&lt;br&gt;
+Equipo SASOFTCO.</camunda:inputParameter>
+          <camunda:inputParameter name="subject">Radicación de Cuenta de Cobro - Corrección Requerida</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0e6pghb</bpmn:incoming>
+      <bpmn:outgoing>Flow_1btmxhq</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:exclusiveGateway id="Gateway_1e89lyk">
+      <bpmn:incoming>Flow_0f572o8</bpmn:incoming>
+      <bpmn:outgoing>Flow_0mw8jyn</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0e6pghb</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sendTask id="Activity_0gwkyco" name="Corrección de cuenta de cobro ">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:inputParameter name="url">${UrlLocalBackendCore}/api/ServiceTask/inform-email</camunda:inputParameter>
+            <camunda:inputParameter name="payload">{
+'to' :   '${Correo}',
+'subject':  '${subject}',
+'bodyEmail':  '${bodyEmail}',
+'secret_key':  '${secret_key}'
+}</camunda:inputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="secret_key">hola</camunda:inputParameter>
+          <camunda:inputParameter name="bodyEmail">Estimado ${nombres},
+&lt;br&gt;&lt;br&gt;
+Esperamos que se encuentre bien. Le informamos que su cuenta de cobro necesita ser corregida respectivamente en los datos proporcionados.
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+Si tiene alguna pregunta o necesita asistencia para realizar las correcciones, no dude en ponerse en contacto con nosotros a través de facturacion@sasoftco.com o 3105736581.
+&lt;br&gt;&lt;br&gt;
+Atentamente,
+&lt;br&gt;
+Equipo SASOFTCO.</camunda:inputParameter>
+          <camunda:inputParameter name="subject">Radicación de Cuenta de Cobro - Corrección Requerida</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1gm64zk</bpmn:incoming>
+      <bpmn:outgoing>Flow_1jlm0o0</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:sendTask id="Activity_0cffn63" name="Corrección de cuenta de cobro ">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:inputParameter name="url">${UrlLocalBackendCore}/api/ServiceTask/inform-email</camunda:inputParameter>
+            <camunda:inputParameter name="payload">{
+'to' :   '${Correo}',
+'subject':  '${subject}',
+'bodyEmail':  '${bodyEmail}',
+'secret_key':  '${secret_key}'
+}</camunda:inputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="secret_key">hola</camunda:inputParameter>
+          <camunda:inputParameter name="bodyEmail">Estimado ${nombres},
+&lt;br&gt;&lt;br&gt;
+Esperamos que se encuentre bien. Le informamos que su cuenta de cobro necesita ser corregida respectivamente en los datos proporcionados.
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+Si tiene alguna pregunta o necesita asistencia para realizar las correcciones, no dude en ponerse en contacto con nosotros a través de facturacion@sasoftco.com o 3105736581.
+&lt;br&gt;&lt;br&gt;
+Atentamente,
+&lt;br&gt;
+Equipo SASOFTCO.</camunda:inputParameter>
+          <camunda:inputParameter name="subject">Radicación de Cuenta de Cobro - Corrección Requerida</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0oelso7</bpmn:incoming>
+      <bpmn:outgoing>Flow_1g1yuwv</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:userTask id="Activity_0z1g4io" name="Corregir cuenta de cobro" camunda:formRef="Corregir_CDC_jefe_adm" camunda:formRefBinding="latest">
+      <bpmn:incoming>Flow_1g1yuwv</bpmn:incoming>
+      <bpmn:outgoing>Flow_1oteyff</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_0xd8alp" name="Corregir cuenta de cobro" camunda:formRef="Corregir_CDC_jefe_comer" camunda:formRefBinding="latest">
+      <bpmn:incoming>Flow_1jlm0o0</bpmn:incoming>
+      <bpmn:outgoing>Flow_0t35awg</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1jlm0o0" sourceRef="Activity_0gwkyco" targetRef="Activity_0xd8alp" />
+    <bpmn:sequenceFlow id="Flow_1g1yuwv" sourceRef="Activity_0cffn63" targetRef="Activity_0z1g4io" />
+    <bpmn:sequenceFlow id="Flow_1btmxhq" sourceRef="Activity_0ub5rz9" targetRef="Activity_13py4i5" />
+    <bpmn:sequenceFlow id="Flow_09tpka8" sourceRef="Activity_13py4i5" targetRef="Gateway_1nnl5r1" />
+    <bpmn:sequenceFlow id="Flow_1oteyff" sourceRef="Activity_0z1g4io" targetRef="Gateway_1nnl5r1" />
+    <bpmn:sequenceFlow id="Flow_0t35awg" sourceRef="Activity_0xd8alp" targetRef="Gateway_1nnl5r1" />
+    <bpmn:userTask id="Activity_13py4i5" name="Corregir cuenta de cobro" camunda:formRef="Corregir_CDC_jefe_tec" camunda:formRefBinding="latest">
+      <bpmn:incoming>Flow_1btmxhq</bpmn:incoming>
+      <bpmn:outgoing>Flow_09tpka8</bpmn:outgoing>
+    </bpmn:userTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0tuziu4">
@@ -368,33 +532,12 @@ Equipo SASOFTCO.</camunda:inputParameter>
         <dc:Bounds x="129" y="80" width="1901" height="1440" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_08d59cg_di" bpmnElement="Lane_08d59cg" isHorizontal="true">
-        <dc:Bounds x="159" y="80" width="1871" height="479" />
+      <bpmndi:BPMNShape id="Lane_113owdz_di" bpmnElement="Lane_113owdz" isHorizontal="true">
+        <dc:Bounds x="159" y="1310" width="1871" height="210" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_115r8ih_di" bpmnElement="Lane_115r8ih" isHorizontal="true" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
-        <dc:Bounds x="189" y="80" width="1841" height="479" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_0wjm1kx_di" bpmnElement="Lane_0wjm1kx" isHorizontal="true">
-        <dc:Bounds x="159" y="559" width="1871" height="180" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_1kl4uqx_di" bpmnElement="Lane_1kl4uqx" isHorizontal="true" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="189" y="559" width="1841" height="180" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_0d1rbrr_di" bpmnElement="Lane_0d1rbrr" isHorizontal="true">
-        <dc:Bounds x="159" y="739" width="1871" height="181" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_09k75gp_di" bpmnElement="Lane_09k75gp" isHorizontal="true" bioc:stroke="#5b176d" bioc:fill="#e1bee7" color:background-color="#e1bee7" color:border-color="#5b176d">
-        <dc:Bounds x="189" y="739" width="1841" height="181" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_0cqp9tq_di" bpmnElement="Lane_0cqp9tq" isHorizontal="true">
-        <dc:Bounds x="159" y="1090" width="1871" height="220" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_153rsqj_di" bpmnElement="Lane_153rsqj" isHorizontal="true" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
-        <dc:Bounds x="189" y="1090" width="1841" height="220" />
+      <bpmndi:BPMNShape id="Lane_0g5tqib_di" bpmnElement="Lane_0g5tqib" isHorizontal="true">
+        <dc:Bounds x="189" y="1310" width="1841" height="210" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1oaxax9_di" bpmnElement="Lane_1oaxax9" isHorizontal="true">
         <dc:Bounds x="159" y="920" width="1871" height="170" />
@@ -403,12 +546,33 @@ Equipo SASOFTCO.</camunda:inputParameter>
       <bpmndi:BPMNShape id="Lane_0yx8bvf_di" bpmnElement="Lane_0yx8bvf" isHorizontal="true" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
         <dc:Bounds x="189" y="920" width="1841" height="170" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_113owdz_di" bpmnElement="Lane_113owdz" isHorizontal="true">
-        <dc:Bounds x="159" y="1310" width="1871" height="210" />
+      <bpmndi:BPMNShape id="Lane_0cqp9tq_di" bpmnElement="Lane_0cqp9tq" isHorizontal="true">
+        <dc:Bounds x="159" y="1090" width="1871" height="220" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_0g5tqib_di" bpmnElement="Lane_0g5tqib" isHorizontal="true">
-        <dc:Bounds x="189" y="1310" width="1841" height="210" />
+      <bpmndi:BPMNShape id="Lane_153rsqj_di" bpmnElement="Lane_153rsqj" isHorizontal="true" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="189" y="1090" width="1841" height="220" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0d1rbrr_di" bpmnElement="Lane_0d1rbrr" isHorizontal="true">
+        <dc:Bounds x="159" y="739" width="1871" height="181" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_09k75gp_di" bpmnElement="Lane_09k75gp" isHorizontal="true" bioc:stroke="#5b176d" bioc:fill="#e1bee7" color:background-color="#e1bee7" color:border-color="#5b176d">
+        <dc:Bounds x="189" y="739" width="1841" height="181" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0wjm1kx_di" bpmnElement="Lane_0wjm1kx" isHorizontal="true">
+        <dc:Bounds x="159" y="559" width="1871" height="180" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1kl4uqx_di" bpmnElement="Lane_1kl4uqx" isHorizontal="true" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="189" y="559" width="1841" height="180" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_08d59cg_di" bpmnElement="Lane_08d59cg" isHorizontal="true">
+        <dc:Bounds x="159" y="80" width="1871" height="479" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_115r8ih_di" bpmnElement="Lane_115r8ih" isHorizontal="true" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
+        <dc:Bounds x="189" y="80" width="1841" height="479" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_1qrisuj" bpmnElement="Activity_06rolqv">
         <dc:Bounds x="310" y="250" width="100" height="80" />
@@ -431,9 +595,6 @@ Equipo SASOFTCO.</camunda:inputParameter>
       <bpmndi:BPMNShape id="Activity_0dav5t3_di" bpmnElement="Activity_0hvisak">
         <dc:Bounds x="900" y="778" width="100" height="80" />
         <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1e89lyk_di" bpmnElement="Gateway_1e89lyk" isMarkerVisible="true">
-        <dc:Bounds x="985" y="635" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_0qehwzx_di" bpmnElement="Gateway_0qehwzx" isMarkerVisible="true">
         <dc:Bounds x="1105" y="793" width="50" height="50" />
@@ -458,24 +619,8 @@ Equipo SASOFTCO.</camunda:inputParameter>
         <dc:Bounds x="1480" y="420" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1scaycr_di" bpmnElement="Activity_14e7un0" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="640" y="350" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0g0i9mg" bpmnElement="Activity_1v615b1" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="1210" y="350" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0mqdc6i_di" bpmnElement="Activity_1fls59e" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="960" y="350" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1r8kpld_di" bpmnElement="Gateway_1r8kpld" isMarkerVisible="true">
         <dc:Bounds x="1235" y="1375" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_12r6mcf" bpmnElement="Activity_1br0c4s" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="770" y="250" width="100" height="80" />
-        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0xyvkfz_di" bpmnElement="Activity_1ajlzed" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
         <dc:Bounds x="1360" y="1140" width="100" height="80" />
@@ -492,6 +637,41 @@ Equipo SASOFTCO.</camunda:inputParameter>
       <bpmndi:BPMNShape id="Activity_0bjvtjl_di" bpmnElement="Activity_1m1bhe7">
         <dc:Bounds x="780" y="1360" width="100" height="80" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1scaycr_di" bpmnElement="Activity_14e7un0" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="640" y="320" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1suha2b_di" bpmnElement="Activity_0nxz9b4">
+        <dc:Bounds x="640" y="450" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0530s5j_di" bpmnElement="Activity_0ub5rz9">
+        <dc:Bounds x="940" y="390" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1e89lyk_di" bpmnElement="Gateway_1e89lyk" isMarkerVisible="true">
+        <dc:Bounds x="965" y="635" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1c58qqc_di" bpmnElement="Activity_0gwkyco">
+        <dc:Bounds x="1210" y="190" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0eh68h8_di" bpmnElement="Activity_0cffn63">
+        <dc:Bounds x="1080" y="310" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ejremm_di" bpmnElement="Activity_0z1g4io" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="900" y="160" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_17a5l8r_di" bpmnElement="Activity_0xd8alp" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="1060" y="100" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_01ep9n6_di" bpmnElement="Activity_13py4i5" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="760" y="250" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_03493jb_di" bpmnElement="Flow_03493jb">
         <di:waypoint x="258" y="290" />
         <di:waypoint x="310" y="290" />
@@ -501,26 +681,9 @@ Equipo SASOFTCO.</camunda:inputParameter>
         <di:waypoint x="515" y="290" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_02c9fjd_di" bpmnElement="Flow_02c9fjd">
-        <di:waypoint x="640" y="370" />
-        <di:waypoint x="610" y="370" />
-        <di:waypoint x="552" y="303" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_03a17wk_di" bpmnElement="Flow_03a17wk">
-        <di:waypoint x="1010" y="350" />
-        <di:waypoint x="1010" y="210" />
-        <di:waypoint x="540" y="210" />
-        <di:waypoint x="540" y="265" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0zp04a1_di" bpmnElement="Flow_0zp04a1">
-        <di:waypoint x="770" y="290" />
-        <di:waypoint x="565" y="290" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0ji6o3u_di" bpmnElement="Flow_0ji6o3u">
-        <di:waypoint x="1260" y="350" />
-        <di:waypoint x="1260" y="190" />
-        <di:waypoint x="480" y="190" />
-        <di:waypoint x="480" y="230" />
-        <di:waypoint x="528" y="278" />
+        <di:waypoint x="640" y="340" />
+        <di:waypoint x="610" y="340" />
+        <di:waypoint x="555" y="300" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0evcifz_di" bpmnElement="Flow_0evcifz">
         <di:waypoint x="540" y="315" />
@@ -532,18 +695,14 @@ Equipo SASOFTCO.</camunda:inputParameter>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0f572o8_di" bpmnElement="Flow_0f572o8">
         <di:waypoint x="880" y="660" />
-        <di:waypoint x="985" y="660" />
+        <di:waypoint x="965" y="660" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0erocjk_di" bpmnElement="Flow_0erocjk">
         <di:waypoint x="1000" y="818" />
         <di:waypoint x="1105" y="818" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0s75x2u_di" bpmnElement="Flow_0s75x2u">
-        <di:waypoint x="1010" y="635" />
-        <di:waypoint x="1010" y="430" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0mw8jyn_di" bpmnElement="Flow_0mw8jyn">
-        <di:waypoint x="1035" y="660" />
+        <di:waypoint x="1015" y="660" />
         <di:waypoint x="1410" y="660" />
         <di:waypoint x="1410" y="1140" />
       </bpmndi:BPMNEdge>
@@ -551,11 +710,6 @@ Equipo SASOFTCO.</camunda:inputParameter>
         <di:waypoint x="1130" y="843" />
         <di:waypoint x="1130" y="1180" />
         <di:waypoint x="1360" y="1180" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0ut4ium_di" bpmnElement="Flow_0ut4ium">
-        <di:waypoint x="1130" y="793" />
-        <di:waypoint x="1130" y="290" />
-        <di:waypoint x="870" y="290" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_10abomh_di" bpmnElement="Flow_10abomh">
         <di:waypoint x="1870" y="460" />
@@ -593,10 +747,6 @@ Equipo SASOFTCO.</camunda:inputParameter>
         <di:waypoint x="1410" y="1400" />
         <di:waypoint x="1410" y="1220" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1xa8l9m_di" bpmnElement="Flow_1xa8l9m">
-        <di:waypoint x="1260" y="1375" />
-        <di:waypoint x="1260" y="430" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0yhzt2z_di" bpmnElement="Flow_0yhzt2z">
         <di:waypoint x="830" y="1035" />
         <di:waypoint x="830" y="1360" />
@@ -612,23 +762,56 @@ Equipo SASOFTCO.</camunda:inputParameter>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0dxsopw_di" bpmnElement="Flow_0dxsopw">
         <di:waypoint x="690" y="985" />
-        <di:waypoint x="690" y="430" />
+        <di:waypoint x="690" y="530" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1q2mybv_di" bpmnElement="Flow_1q2mybv">
         <di:waypoint x="715" y="1010" />
         <di:waypoint x="805" y="1010" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_0yndvsw_di" bpmnElement="Association_0yndvsw">
-        <di:waypoint x="589" y="976" />
-        <di:waypoint x="626" y="950" />
+      <bpmndi:BPMNEdge id="Flow_0e6pghb_di" bpmnElement="Flow_0e6pghb">
+        <di:waypoint x="990" y="635" />
+        <di:waypoint x="990" y="470" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_09jtsj0_di" bpmnElement="Association_09jtsj0">
-        <di:waypoint x="880" y="640" />
-        <di:waypoint x="932" y="620" />
+      <bpmndi:BPMNEdge id="Flow_0oelso7_di" bpmnElement="Flow_0oelso7">
+        <di:waypoint x="1130" y="793" />
+        <di:waypoint x="1130" y="390" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_0mmhy1f_di" bpmnElement="Association_0mmhy1f">
-        <di:waypoint x="1000" y="799" />
-        <di:waypoint x="1050" y="780" />
+      <bpmndi:BPMNEdge id="Flow_1gm64zk_di" bpmnElement="Flow_1gm64zk">
+        <di:waypoint x="1260" y="1375" />
+        <di:waypoint x="1260" y="270" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12kj6qf_di" bpmnElement="Flow_12kj6qf">
+        <di:waypoint x="690" y="450" />
+        <di:waypoint x="690" y="400" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1jlm0o0_di" bpmnElement="Flow_1jlm0o0">
+        <di:waypoint x="1260" y="190" />
+        <di:waypoint x="1260" y="140" />
+        <di:waypoint x="1160" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1g1yuwv_di" bpmnElement="Flow_1g1yuwv">
+        <di:waypoint x="1130" y="310" />
+        <di:waypoint x="1130" y="200" />
+        <di:waypoint x="1000" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1btmxhq_di" bpmnElement="Flow_1btmxhq">
+        <di:waypoint x="990" y="390" />
+        <di:waypoint x="990" y="290" />
+        <di:waypoint x="860" y="290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_09tpka8_di" bpmnElement="Flow_09tpka8">
+        <di:waypoint x="760" y="290" />
+        <di:waypoint x="565" y="290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1oteyff_di" bpmnElement="Flow_1oteyff">
+        <di:waypoint x="900" y="200" />
+        <di:waypoint x="620" y="200" />
+        <di:waypoint x="551" y="276" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0t35awg_di" bpmnElement="Flow_0t35awg">
+        <di:waypoint x="1060" y="140" />
+        <di:waypoint x="540" y="140" />
+        <di:waypoint x="540" y="265" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="TextAnnotation_17vkqx7_di" bpmnElement="TextAnnotation_17vkqx7">
         <dc:Bounds x="1040" y="750" width="100" height="30" />
@@ -642,6 +825,18 @@ Equipo SASOFTCO.</camunda:inputParameter>
         <dc:Bounds x="920" y="590" width="100" height="30" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_0mmhy1f_di" bpmnElement="Association_0mmhy1f">
+        <di:waypoint x="1000" y="799" />
+        <di:waypoint x="1050" y="780" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0yndvsw_di" bpmnElement="Association_0yndvsw">
+        <di:waypoint x="589" y="976" />
+        <di:waypoint x="626" y="950" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_09jtsj0_di" bpmnElement="Association_09jtsj0">
+        <di:waypoint x="880" y="640" />
+        <di:waypoint x="932" y="620" />
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
