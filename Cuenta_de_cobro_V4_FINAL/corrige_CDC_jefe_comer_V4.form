@@ -1,0 +1,584 @@
+{
+  "components": [
+    {
+      "text": "### Corrección de cuentas de colaboradores en proyectos SASOFTCO",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1f7xugj",
+        "columns": null
+      },
+      "id": "Field_0q9r0bg",
+      "properties": {
+        "type": "markdown"
+      }
+    },
+    {
+      "text": "Tabs",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0awp87z",
+        "columns": null
+      },
+      "id": "Field_0g4gxy6",
+      "properties": {
+        "type": "startTabs"
+      }
+    },
+    {
+      "text": "Información general",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_114lt5c",
+        "columns": null
+      },
+      "id": "Field_0wfkr31",
+      "properties": {
+        "type": "tab"
+      }
+    },
+    {
+      "label": "Comentarios encontrados para la corrección: ",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1wvgy2i",
+        "columns": null
+      },
+      "id": "Field_0iaojow",
+      "key": "comentarios_aux_adm",
+      "readonly": true,
+      "properties": {
+        "type": "text"
+      }
+    },
+    {
+      "label": "Nombres",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ovtruq",
+        "columns": null
+      },
+      "id": "Field_011yr90",
+      "key": "nombres",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "text"
+      }
+    },
+    {
+      "label": "Apellidos",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ovtruq",
+        "columns": null
+      },
+      "id": "Field_1qzoszt",
+      "key": "apellidos",
+      "validate": {
+        "required": false
+      },
+      "properties": {
+        "type": "text"
+      }
+    },
+    {
+      "label": "Celular",
+      "type": "number",
+      "layout": {
+        "row": "Row_1h7v03a",
+        "columns": null
+      },
+      "id": "Field_19xonlr",
+      "key": "Ntelefono",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "digit"
+      }
+    },
+    {
+      "label": "Correo electrónico",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1h7v03a",
+        "columns": null
+      },
+      "id": "Field_0x81r21",
+      "key": "Correo",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "email"
+      }
+    },
+    {
+      "label": "Dirección de residencia",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0kktxhv",
+        "columns": null
+      },
+      "id": "Field_0jl84ka",
+      "key": "direccion_residencia",
+      "validate": {
+        "required": false
+      },
+      "properties": {
+        "type": "text"
+      },
+      "disabled": false,
+      "readonly": true
+    },
+    {
+      "label": "Text field",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0kktxhv",
+        "columns": null
+      },
+      "id": "Field_0vija92",
+      "key": "textfield_wl9zb",
+      "properties": {
+        "type": "openModal",
+        "modalComponent": "addressGenerator",
+        "keyAddress": "direccion_residencia"
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Cédula de ciudadanía",
+          "value": "Cédula de ciudadanía"
+        },
+        {
+          "label": "Cédula de extranjería",
+          "value": "Cédula de extranjería"
+        }
+      ],
+      "label": "Tipo de documento",
+      "type": "select",
+      "layout": {
+        "row": "Row_04ttzid",
+        "columns": null
+      },
+      "id": "Field_02vq31s",
+      "key": "tipo_documento",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "select"
+      }
+    },
+    {
+      "label": "Número de documento",
+      "type": "number",
+      "layout": {
+        "row": "Row_04ttzid",
+        "columns": null
+      },
+      "id": "Field_0c2yjik",
+      "key": "numero_documento",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "digit"
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "No cuenta",
+          "value": "nocuenta"
+        },
+        {
+          "label": "Primaria",
+          "value": "primaria"
+        },
+        {
+          "label": "Básica secundaria",
+          "value": "secundaria"
+        },
+        {
+          "label": "Bachiller Académico",
+          "value": "bachiller"
+        },
+        {
+          "label": "Pregrado",
+          "value": "pregrado"
+        },
+        {
+          "label": "Maestría",
+          "value": "maestria"
+        },
+        {
+          "label": "Doctorado",
+          "value": "doctorado"
+        },
+        {
+          "label": "Técnico profesional",
+          "value": "tecnico"
+        }
+      ],
+      "label": "Nivel académico",
+      "type": "select",
+      "layout": {
+        "row": "Row_1rrolq4",
+        "columns": null
+      },
+      "id": "Field_0dwvkeu",
+      "key": "nivel_academico",
+      "properties": {
+        "type": "select"
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "text": "Información servicios prestados",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1wy42k6",
+        "columns": null
+      },
+      "id": "Field_10mhiwx",
+      "properties": {
+        "type": "tab"
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Área de Ingeniería",
+          "value": "ingenieria"
+        },
+        {
+          "label": "Área Administrativa",
+          "value": "administrativa"
+        },
+        {
+          "label": "Área Comercial",
+          "value": "comercial"
+        }
+      ],
+      "label": "Dirección o dependencia donde trabaja. ",
+      "type": "select",
+      "layout": {
+        "row": "Row_0lgys0t",
+        "columns": null
+      },
+      "id": "Field_1c8gero",
+      "key": "dependencia",
+      "properties": {
+        "type": "select"
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Fecha de inicio de servicio",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0zr933l",
+        "columns": null
+      },
+      "id": "Field_0kmy9m5",
+      "key": "fecha_inicio",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "datepicker"
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Fecha de finalización de servicios",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0zr933l",
+        "columns": null
+      },
+      "id": "Field_1wupjx5",
+      "key": "fecha_fin",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "datepicker"
+      }
+    },
+    {
+      "label": "Valor a cobrar",
+      "type": "number",
+      "layout": {
+        "row": "Row_0zr933l",
+        "columns": null
+      },
+      "id": "Field_0rtthtz",
+      "key": "valor_cobrar",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "currency",
+        "thousandSeparator": ",",
+        "decimalDigits": "2"
+      }
+    },
+    {
+      "label": "Detalle sus servicios realizados durante el período indicado; describa el nombre del proyecto en el que mayor dedicó tiempo.",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0bo2aui",
+        "columns": null
+      },
+      "id": "Field_0kgg5w0",
+      "key": "servicios_realizados",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "textarea"
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Presencial",
+          "value": "Presencial"
+        },
+        {
+          "label": "Remoto",
+          "value": "Remoto"
+        },
+        {
+          "label": "Híbrida",
+          "value": "Hibrida"
+        }
+      ],
+      "label": "Modalidad de trabajo",
+      "type": "select",
+      "layout": {
+        "row": "Row_0im5c5t",
+        "columns": null
+      },
+      "id": "Field_18xnhz4",
+      "key": "modalidad_trabajo",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "select"
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Contrato por Prestación de Servicios",
+          "value": "CPS"
+        },
+        {
+          "label": "Contrato de aprendizaje o pasante",
+          "value": "contrato_aprendizaje"
+        }
+      ],
+      "label": "Contrato de tipo:",
+      "type": "select",
+      "layout": {
+        "row": "Row_1a0k3lw",
+        "columns": null
+      },
+      "id": "Field_1lc94yq",
+      "key": "contrato_tipo",
+      "properties": {
+        "type": "select"
+      }
+    },
+    {
+      "text": "Anexos de documentación",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_050d465",
+        "columns": null
+      },
+      "id": "Field_1832utz",
+      "properties": {
+        "type": "tab"
+      }
+    },
+    {
+      "label": "¿Es la primera vez que registra una cuenta de cobro o desea actualiza una cuenta bancaria o de RUT?",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1jqbeau",
+        "columns": 16
+      },
+      "id": "Field_0in0f1p",
+      "key": "pregunta",
+      "description": "De lo contrario, puede continuar sin marcar la casilla.",
+      "defaultValue": false,
+      "properties": {
+        "type": "checkbox"
+      }
+    },
+    {
+      "label": "Cuenta de cobro dirigida a SASOFTCO",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_09c72x2",
+        "columns": null
+      },
+      "id": "Field_0czgpal",
+      "key": "cuenta_cobro",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "type": "uploadFile",
+        "limitSize": "5 MB",
+        "allowExtensions": "pdf,rar,zip"
+      },
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB. En caso de ser más de una cuenta de cobro anexe un archivo .zip"
+    },
+    {
+      "label": "Certificado bancario",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1k7nhf6",
+        "columns": null
+      },
+      "id": "Field_0h81jtf",
+      "key": "certificado_banco",
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+      "validate": {
+        "required": false
+      },
+      "properties": {
+        "type": "uploadFile",
+        "limitSize": "5 MB",
+        "allowExtensions": "pdf"
+      },
+      "conditional": {
+        "hide": "=pregunta != true"
+      }
+    },
+    {
+      "label": "Copia RUT",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0smfx8g",
+        "columns": null
+      },
+      "id": "Field_1xiyv4a",
+      "key": "RUT",
+      "validate": {
+        "required": false
+      },
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+      "properties": {
+        "type": "uploadFile",
+        "limitSize": "5 MB",
+        "allowExtensions": "pdf"
+      },
+      "conditional": {
+        "hide": "=pregunta != true"
+      }
+    },
+    {
+      "label": "Seguridad social asociada",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1omrn2r",
+        "columns": null
+      },
+      "id": "Field_1l9bp7j",
+      "key": "seg_social",
+      "validate": {
+        "required": false
+      },
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+      "properties": {
+        "type": "uploadFile",
+        "limitSize": "5 MB",
+        "allowExtensions": "pdf"
+      },
+      "conditional": {
+        "hide": "=contrato_tipo = \"Contrato por Prestación de Servicios\""
+      }
+    },
+    {
+      "label": "Certificado del pago de planilla.",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_00e5gx4",
+        "columns": null
+      },
+      "id": "Field_17xcojv",
+      "key": "Certificadop",
+      "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
+      "validate": {
+        "required": false
+      },
+      "properties": {
+        "type": "uploadFile",
+        "limitSize": "5 MB",
+        "allowExtensions": "pdf"
+      },
+      "conditional": {
+        "hide": "=contrato_tipo = \"Contrato de aprendizaje o pasante\""
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Enviar Cuenta de Cobro",
+      "type": "button",
+      "layout": {
+        "row": "Row_07eci9w",
+        "columns": null
+      },
+      "id": "Field_0zmhspw",
+      "key": "field_0ede1b4",
+      "properties": {
+        "type": "submit"
+      }
+    },
+    {
+      "text": "Tabs",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1e8kmfa",
+        "columns": null
+      },
+      "id": "Field_0g4gxy7",
+      "properties": {
+        "type": "endTabs"
+      }
+    }
+  ],
+  "type": "default",
+  "typeForm": "tabs",
+  "id": "Corregir_CDC_jefe_comer",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.26.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.20.0",
+  "schemaVersion": 16
+}
