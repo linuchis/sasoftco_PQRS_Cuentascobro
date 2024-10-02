@@ -405,6 +405,9 @@
       "key": "contrato_tipo",
       "properties": {
         "type": "select"
+      },
+      "validate": {
+        "required": true
       }
     },
     {
@@ -508,7 +511,7 @@
       "id": "Field_1l9bp7j",
       "key": "seg_social",
       "validate": {
-        "required": false
+        "required": true
       },
       "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
       "properties": {
@@ -531,7 +534,7 @@
       "key": "Certificadop",
       "description": "Tipo de archivo permitido .pdf hasta de 5 MB.",
       "validate": {
-        "required": false
+        "required": true
       },
       "properties": {
         "type": "uploadFile",

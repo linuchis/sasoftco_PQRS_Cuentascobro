@@ -542,7 +542,7 @@
         "required": true
       },
       "conditional": {
-        "hide": "=aprueba_revision_tec != \"No\""
+        "hide": "=aprueba_revision_adm != \"No\""
       },
       "properties": {
         "type": "text"
