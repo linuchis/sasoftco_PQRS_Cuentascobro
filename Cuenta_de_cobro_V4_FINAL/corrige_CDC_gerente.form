@@ -47,7 +47,7 @@
         "columns": null
       },
       "id": "Field_0iaojow",
-      "key": "comentarios_jefe_comercial",
+      "key": "comentarios_gerente",
       "readonly": true,
       "properties": {
         "type": "text"
